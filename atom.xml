@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>华仔の博客</title>
+  
+  <subtitle>Where there&#39;s a will, There&#39;s a way.</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://fanghuafan.github.io/"/>
+  <updated>2018-07-03T14:59:33.397Z</updated>
+  <id>https://fanghuafan.github.io/</id>
+  
+  <author>
+    <name>华仔</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Jenkins学习</title>
+    <link href="https://fanghuafan.github.io/posts/32639/"/>
+    <id>https://fanghuafan.github.io/posts/32639/</id>
+    <published>2018-07-02T15:28:45.000Z</published>
+    <updated>2018-07-03T14:59:33.397Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、Jenkins是什么？&quot;&gt;&lt;a href=&quot;#一、Jenkins是什么？&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Jenkins" scheme="https://fanghuafan.github.io/categories/Jenkins/"/>
+    
+    
+      <category term="Jenkins" scheme="https://fanghuafan.github.io/tags/Jenkins/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Maven学习</title>
+    <link href="https://fanghuafan.github.io/posts/8081/"/>
+    <id>https://fanghuafan.github.io/posts/8081/</id>
+    <published>2018-07-01T23:33:38.000Z</published>
+    <updated>2018-07-02T15:30:20.969Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、maven是什么？&quot;&gt;&lt;a href=&quot;#一、maven是什么？&quot; class=&quot;headerlink&quot; title=&quot;一、maven是什么？&quot;&gt;&lt;/a&gt;一、maven是什么？&lt;/h2&gt;&lt;p&gt; 　　Apache
+        
+      
+    
+    </summary>
+    
+      <category term="maven" scheme="https://fanghuafan.github.io/categories/maven/"/>
+    
+    
+      <category term="maven" scheme="https://fanghuafan.github.io/tags/maven/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git学习</title>
+    <link href="https://fanghuafan.github.io/posts/1/"/>
+    <id>https://fanghuafan.github.io/posts/1/</id>
+    <published>2018-07-01T00:41:26.000Z</published>
+    <updated>2018-07-02T14:37:50.815Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;一、git是什么？&quot;&gt;&lt;a href=&quot;#一、git是什么？&quot; class=&quot;headerlink&quot; title=&quot;一、git是什么？&quot;&gt;&lt;/a&gt;一、git是什么？&lt;/h3&gt;&lt;p&gt; 　　git是一个分布式版本控制软件，最初由林纳斯·托瓦兹（Linus
+        
+      
+    
+    </summary>
+    
+      <category term="git" scheme="https://fanghuafan.github.io/categories/git/"/>
+    
+    
+      <category term="git" scheme="https://fanghuafan.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java(String)的replaceFirst、replaceAll、replace区别</title>
+    <link href="https://fanghuafan.github.io/posts/14145/"/>
+    <id>https://fanghuafan.github.io/posts/14145/</id>
+    <published>2018-06-29T23:13:14.000Z</published>
+    <updated>2018-06-29T23:19:18.570Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;replace和replaceAll是JAVA中常用的替换字符的方法-它们的区别是&quot;&gt;&lt;a href=&quot;#replace和replaceAll是JAVA中常用的替换字符的方法-它们的区别是&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="JAVA" scheme="https://fanghuafan.github.io/categories/JAVA/"/>
+    
+    
+      <category term="JAVA" scheme="https://fanghuafan.github.io/tags/JAVA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JQuery操作table的一些实现</title>
+    <link href="https://fanghuafan.github.io/posts/21846/"/>
+    <id>https://fanghuafan.github.io/posts/21846/</id>
+    <published>2018-06-14T23:41:47.000Z</published>
+    <updated>2018-06-14T23:47:56.195Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+      <category term="JQuery" scheme="https://fanghuafan.github.io/categories/JQuery/"/>
+    
+    
+      <category term="JQuery" scheme="https://fanghuafan.github.io/tags/JQuery/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git暂存stash命令</title>
+    <link href="https://fanghuafan.github.io/posts/60448/"/>
+    <id>https://fanghuafan.github.io/posts/60448/</id>
+    <published>2018-06-14T23:21:07.000Z</published>
+    <updated>2018-06-14T23:34:57.504Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h5 id=&quot;当git-fetch发现远程分支已经修改，存在merge合并冲突，可以试着先使用git-stash命令将当前的工作区保存起来，等待pull-fetch-merge之后再还原-。&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="git" scheme="https://fanghuafan.github.io/categories/git/"/>
+    
+    
+      <category term="git" scheme="https://fanghuafan.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>KVM+SPICE安装配置文档</title>
+    <link href="https://fanghuafan.github.io/posts/43868/"/>
+    <id>https://fanghuafan.github.io/posts/43868/</id>
+    <published>2018-05-07T15:07:45.000Z</published>
+    <updated>2018-05-07T15:12:21.839Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;CentOS7-2部署KVM虚拟机&quot;&gt;&lt;a href=&quot;#CentOS7-2部署KVM虚拟机&quot; class=&quot;headerlink&quot; title=&quot;CentOS7.2部署KVM虚拟机&quot;&gt;&lt;/a&gt;CentOS7.2部署KVM虚拟机&lt;/h3&gt;&lt;h4
+        
+      
+    
+    </summary>
+    
+      <category term="server" scheme="https://fanghuafan.github.io/categories/server/"/>
+    
+      <category term="虚拟化" scheme="https://fanghuafan.github.io/categories/server/%E8%99%9A%E6%8B%9F%E5%8C%96/"/>
+    
+    
+      <category term="JKVM" scheme="https://fanghuafan.github.io/tags/JKVM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JAVA反射中，Class.forName和classloader的区别</title>
+    <link href="https://fanghuafan.github.io/posts/34422/"/>
+    <id>https://fanghuafan.github.io/posts/34422/</id>
+    <published>2018-05-06T15:08:49.000Z</published>
+    <updated>2018-05-06T15:11:49.285Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;JAVA中class-forName-和classLoader都可用来对类进行加载：&quot;&gt;&lt;a href=&quot;#JAVA中class-forName-和classLoader都可用来对类进行加载：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="JAVA" scheme="https://fanghuafan.github.io/categories/JAVA/"/>
+    
+      <category term="源码分析" scheme="https://fanghuafan.github.io/categories/JAVA/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
+    
+    
+      <category term="JAVA" scheme="https://fanghuafan.github.io/tags/JAVA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DELL R730xd服务器风扇问题解决</title>
+    <link href="https://fanghuafan.github.io/posts/53555/"/>
+    <id>https://fanghuafan.github.io/posts/53555/</id>
+    <published>2018-04-15T11:34:49.000Z</published>
+    <updated>2018-05-06T15:01:02.396Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;DELL R730xd 加装PCIE显卡风扇问题   &lt;/p&gt;
+&lt;p&gt;国外网站看到一个IMPI的解决方法，禁用对第三方PCI卡的风扇响应&lt;/p&gt;
+&lt;h4 id=&quot;1-Install-IPMI-tools&quot;&gt;&lt;a href=&quot;#1-Install-IPMI-tools&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="server" scheme="https://fanghuafan.github.io/categories/server/"/>
+    
+    
+      <category term="server" scheme="https://fanghuafan.github.io/tags/server/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Angular中请求Spring Boot接口缺少X-Application-Context报错</title>
+    <link href="https://fanghuafan.github.io/posts/23032/"/>
+    <id>https://fanghuafan.github.io/posts/23032/</id>
+    <published>2018-04-14T11:34:49.000Z</published>
+    <updated>2018-04-14T15:04:17.697Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Angular中请求Spring-Boot接口缺少X-Application-Context报错&quot;&gt;&lt;a href=&quot;#Angular中请求Spring-Boot接口缺少X-Application-Context报错&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Spring" scheme="https://fanghuafan.github.io/categories/Spring/"/>
+    
+    
+      <category term="Spring Boot" scheme="https://fanghuafan.github.io/tags/Spring-Boot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>httpclient SSL请求异常处理</title>
+    <link href="https://fanghuafan.github.io/posts/6932/"/>
+    <id>https://fanghuafan.github.io/posts/6932/</id>
+    <published>2018-04-13T15:28:23.000Z</published>
+    <updated>2018-04-13T15:33:49.705Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;今天突然发现请求微信小程序获取OpenID的接口报错，看了一下日志，找了好久发现是SSl版本的原因，之前没有问题，今天重启了一次就出现这个问题。&lt;/p&gt;
+&lt;pre&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+      <category term="Spring" scheme="https://fanghuafan.github.io/categories/Spring/"/>
+    
+    
+      <category term="Spring MVC" scheme="https://fanghuafan.github.io/tags/Spring-MVC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>适配器模式</title>
+    <link href="https://fanghuafan.github.io/posts/39554/"/>
+    <id>https://fanghuafan.github.io/posts/39554/</id>
+    <published>2018-04-07T01:36:04.000Z</published>
+    <updated>2018-04-07T03:23:40.300Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;适配器模式（Adapter Pattern）是一种结构模式，主要是实现类、对象、接口的兼容性，&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+      <category term="设计模式" scheme="https://fanghuafan.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="https://fanghuafan.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>原型模式</title>
+    <link href="https://fanghuafan.github.io/posts/22548/"/>
+    <id>https://fanghuafan.github.io/posts/22548/</id>
+    <published>2018-04-03T15:06:50.000Z</published>
+    <updated>2018-04-03T15:32:47.038Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;原型模式（Prototype Pattern）是用于创建重复的对象，同时又能保证性能。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。
+        
+      
+    
+    </summary>
+    
+      <category term="设计模式" scheme="https://fanghuafan.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="https://fanghuafan.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode-no5</title>
+    <link href="https://fanghuafan.github.io/posts/45091/"/>
+    <id>https://fanghuafan.github.io/posts/45091/</id>
+    <published>2018-04-03T14:38:59.000Z</published>
+    <updated>2018-04-03T14:41:51.767Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="https://fanghuafan.github.io/categories/Algorithm/"/>
+    
+      <category term="leetcode" scheme="https://fanghuafan.github.io/categories/Algorithm/leetcode/"/>
+    
+      <category term="动态规划算法" scheme="https://fanghuafan.github.io/categories/Algorithm/leetcode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="Algorithm" scheme="https://fanghuafan.github.io/tags/Algorithm/"/>
+    
+      <category term="leetcode" scheme="https://fanghuafan.github.io/tags/leetcode/"/>
+    
+      <category term="动态规划算法" scheme="https://fanghuafan.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Xenserver删除VM存储无法释放</title>
+    <link href="https://fanghuafan.github.io/posts/16051/"/>
+    <id>https://fanghuafan.github.io/posts/16051/</id>
+    <published>2018-04-03T14:22:10.000Z</published>
+    <updated>2018-04-03T14:31:07.660Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;（1）执行命令：&lt;br&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td
+        
+      
+    
+    </summary>
+    
+      <category term="xenserver" scheme="https://fanghuafan.github.io/categories/xenserver/"/>
+    
+    
+      <category term="云计算" scheme="https://fanghuafan.github.io/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>建造者模式</title>
+    <link href="https://fanghuafan.github.io/posts/29711/"/>
+    <id>https://fanghuafan.github.io/posts/29711/</id>
+    <published>2018-04-02T13:10:43.000Z</published>
+    <updated>2018-04-02T15:07:58.859Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;建造者模式（Builder Pattern）属于创建型模式，它使用多个简单的对象一步一步构建成一个复杂的对象。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。&lt;/p&gt;
+&lt;figure class=&quot;highlight
+        
+      
+    
+    </summary>
+    
+      <category term="设计模式" scheme="https://fanghuafan.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="https://fanghuafan.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>抽象工厂模式</title>
+    <link href="https://fanghuafan.github.io/posts/56455/"/>
+    <id>https://fanghuafan.github.io/posts/56455/</id>
+    <published>2018-04-02T12:22:58.000Z</published>
+    <updated>2018-04-02T15:07:58.863Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;抽象工厂模式（Abstract Factory Pattern）是围绕一个超级工厂创建其他工厂。该超级工厂又称为其他工厂的工厂。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。&lt;/p&gt;
+&lt;figure class=&quot;highlight
+        
+      
+    
+    </summary>
+    
+      <category term="设计模式" scheme="https://fanghuafan.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="https://fanghuafan.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>工厂模式</title>
+    <link href="https://fanghuafan.github.io/posts/6013/"/>
+    <id>https://fanghuafan.github.io/posts/6013/</id>
+    <published>2018-04-01T13:47:06.000Z</published>
+    <updated>2018-04-02T23:31:22.183Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;工厂模式（Factory Pattern）是创建型模式的一种，在创建对象时不会对客户端暴露创建逻辑，并且是通过使用一个共同的接口来指向新创建的对象。&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+        
+      
+    
+    </summary>
+    
+      <category term="设计模式" scheme="https://fanghuafan.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="https://fanghuafan.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>单例模式</title>
+    <link href="https://fanghuafan.github.io/posts/60114/"/>
+    <id>https://fanghuafan.github.io/posts/60114/</id>
+    <published>2018-03-31T09:15:30.000Z</published>
+    <updated>2018-03-31T14:06:50.545Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;单例模式（Singleton Pattern）属于创建型模式，此模式涉及单一的类与对象，类负责创建自己的对象，同时保证只有一个对象被使用。&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+        
+      
+    
+    </summary>
+    
+      <category term="设计模式" scheme="https://fanghuafan.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="https://fanghuafan.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>cloudstack删除zone方法</title>
+    <link href="https://fanghuafan.github.io/posts/28333/"/>
+    <id>https://fanghuafan.github.io/posts/28333/</id>
+    <published>2018-03-30T15:53:20.000Z</published>
+    <updated>2018-03-30T16:09:37.924Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h5 id=&quot;登录mysql或者mariadb&quot;&gt;&lt;a href=&quot;#登录mysql或者mariadb&quot; class=&quot;headerlink&quot; title=&quot;登录mysql或者mariadb&quot;&gt;&lt;/a&gt;登录mysql或者mariadb&lt;/h5&gt;&lt;figure
+        
+      
+    
+    </summary>
+    
+      <category term="云计算" scheme="https://fanghuafan.github.io/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
+    
+      <category term="cloudstack" scheme="https://fanghuafan.github.io/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/cloudstack/"/>
+    
+    
+      <category term="cloudstack" scheme="https://fanghuafan.github.io/tags/cloudstack/"/>
+    
+  </entry>
+  
+</feed>

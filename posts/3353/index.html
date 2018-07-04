@@ -1,0 +1,1725 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="Chinese">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="JAVA,知识体系," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="华仔の博客" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="一、Java基础知识阅读源代码String、Integer、Long、Enum、BigDecimal、ThreadLocal、ClassLoader &amp;amp; URLClassLoader、ArrayList &amp;amp; LinkedList、 HashMap &amp;amp; LinkedHashMap &amp;amp; TreeMap &amp;amp; CouncurrentHashMap、HashSet">
+<meta name="keywords" content="JAVA,知识体系">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java知识体系">
+<meta property="og:url" content="https://fanghuafan.github.io/posts/3353/index.html">
+<meta property="og:site_name" content="华仔の博客">
+<meta property="og:description" content="一、Java基础知识阅读源代码String、Integer、Long、Enum、BigDecimal、ThreadLocal、ClassLoader &amp;amp; URLClassLoader、ArrayList &amp;amp; LinkedList、 HashMap &amp;amp; LinkedHashMap &amp;amp; TreeMap &amp;amp; CouncurrentHashMap、HashSet">
+<meta property="og:locale" content="Chinese">
+<meta property="og:image" content="https://fanghuafan.github.io/images/true%20(1).jpg">
+<meta property="og:updated_time" content="2018-06-29T23:57:49.201Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java知识体系">
+<meta name="twitter:description" content="一、Java基础知识阅读源代码String、Integer、Long、Enum、BigDecimal、ThreadLocal、ClassLoader &amp;amp; URLClassLoader、ArrayList &amp;amp; LinkedList、 HashMap &amp;amp; LinkedHashMap &amp;amp; TreeMap &amp;amp; CouncurrentHashMap、HashSet">
+<meta name="twitter:image" content="https://fanghuafan.github.io/images/true%20(1).jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://fanghuafan.github.io/posts/3353/"/>
+
+
+
+
+
+  <title>Java知识体系 | 华仔の博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="Chinese">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">华仔の博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Where there's a will, There's a way.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-留言板">
+          <a href="/comment/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-comment"></i> <br />
+            
+            留言板
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fanghuafan.github.io/posts/3353/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="华仔">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="华仔の博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Java知识体系</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-26T21:42:17+08:00">
+                2018-03-26
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-06-30T07:57:49+08:00">
+                2018-06-30
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JAVA/" itemprop="url" rel="index">
+                    <span itemprop="name">JAVA</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JAVA/知识体系/" itemprop="url" rel="index">
+                    <span itemprop="name">知识体系</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/posts/3353/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/posts/3353/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/posts/3353/" class="leancloud_visitors" data-flag-title="Java知识体系">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2,421
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  9
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="/../../images/true (1).jpg" rel="gallery_cjj7s1k4s000hggjpp64kipul"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="/../../images/true (1).jpg" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
+
+      
+        <hr>
+<h3 id="一、Java基础知识"><a href="#一、Java基础知识" class="headerlink" title="一、Java基础知识"></a>一、Java基础知识</h3><h4 id="阅读源代码"><a href="#阅读源代码" class="headerlink" title="阅读源代码"></a>阅读源代码</h4><p><a href="../38677">String</a>、Integer、Long、Enum、BigDecimal、ThreadLocal、ClassLoader &amp; URLClassLoader、ArrayList &amp; LinkedList、 HashMap &amp; LinkedHashMap &amp; TreeMap &amp; CouncurrentHashMap、HashSet &amp; LinkedHashSet &amp; TreeSet   </p>
+<h4 id="Java中各种变量类型"><a href="#Java中各种变量类型" class="headerlink" title="Java中各种变量类型"></a>Java中各种变量类型</h4><p>熟悉Java String的使用，熟悉String的各种函数<br>JDK 6和JDK 7中substring的原理及区别、</p>
+<h4 id="replaceFirst、replaceAll、replace区别"><a href="#replaceFirst、replaceAll、replace区别" class="headerlink" title="replaceFirst、replaceAll、replace区别"></a><a href="../14145">replaceFirst、replaceAll、replace区别</a></h4><h4 id="String对“-”的重载、"><a href="#String对“-”的重载、" class="headerlink" title="String对“+”的重载、"></a><a href="https://blog.csdn.net/caonima0001112/article/details/50492718" target="_blank" rel="noopener">String对“+”的重载、</a></h4><h4 id="String-valueOf和Integer-toString的区别"><a href="#String-valueOf和Integer-toString的区别" class="headerlink" title="String.valueOf和Integer.toString的区别"></a><a href="https://blog.csdn.net/itmyhome1990/article/details/77879653" target="_blank" rel="noopener">String.valueOf和Integer.toString的区别</a></h4><h4 id="字符串的不可变性"><a href="#字符串的不可变性" class="headerlink" title="字符串的不可变性"></a><a href="https://blog.csdn.net/wuwenxiang91322/article/details/11861497" target="_blank" rel="noopener">字符串的不可变性</a></h4><h4 id="自动拆装箱"><a href="#自动拆装箱" class="headerlink" title="自动拆装箱"></a><a href="https://www.cnblogs.com/dolphin0520/p/3780005.html" target="_blank" rel="noopener">自动拆装箱</a></h4><p><a href="https://www.cnblogs.com/dolphin0520/p/3780005.html" target="_blank" rel="noopener">Integer的缓存机制</a></p>
+<h4 id="熟悉Java中各种关键字"><a href="#熟悉Java中各种关键字" class="headerlink" title="熟悉Java中各种关键字"></a>熟悉Java中各种关键字</h4><p><a href="http://www.cnblogs.com/lanxuezaipiao/p/3369962.html" target="_blank" rel="noopener">transient</a>，<a href="https://blog.csdn.net/liranke/article/details/5574791" target="_blank" rel="noopener">instanceof</a>、<a href="https://www.cnblogs.com/dolphin0520/p/3920373.html" target="_blank" rel="noopener">volatile</a>、<a href="http://www.cnblogs.com/GnagWang/archive/2011/02/27/1966606.html" target="_blank" rel="noopener">synchronized</a>、<a href="https://www.cnblogs.com/dolphin0520/p/3736238.html" target="_blank" rel="noopener">final</a>、static、const 原理及用法。</p>
+<h4 id="集合类"><a href="#集合类" class="headerlink" title="集合类"></a>集合类</h4><p><a href="https://www.jianshu.com/p/9d90a95ce26f" target="_blank" rel="noopener">常用集合类的使用</a></p>
+<p>ArrayList和LinkedList和Vector的区别 </p>
+<p>SynchronizedList和Vector的区别</p>
+<p>HashMap、HashTable、ConcurrentHashMap区别</p>
+<p>Java 8中stream相关用法</p>
+<p>apache集合处理工具类的使用</p>
+<p>不同版本的JDK中HashMap的实现的区别以及原因</p>
+<h4 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h4><p>枚举的用法、枚举与单例、Enum类</p>
+<h4 id="Java-IO-amp-Java-NIO，并学会使用"><a href="#Java-IO-amp-Java-NIO，并学会使用" class="headerlink" title="Java IO&amp;Java NIO，并学会使用"></a>Java IO&amp;Java NIO，并学会使用</h4><p>bio、nio和aio的区别、三种IO的用法与原理、netty</p>
+<h4 id="Java反射与javassist"><a href="#Java反射与javassist" class="headerlink" title="Java反射与javassist"></a>Java反射与javassist</h4><p>反射与工厂模式、 java.lang.reflect.*</p>
+<h4 id="Java序列化"><a href="#Java序列化" class="headerlink" title="Java序列化"></a>Java序列化</h4><p>什么是序列化与反序列化、为什么序列化</p>
+<h4 id="序列化底层原理"><a href="#序列化底层原理" class="headerlink" title="序列化底层原理"></a>序列化底层原理</h4><p>序列化与单例模式</p>
+<p>protobuf</p>
+<p>为什么说序列化并不安全</p>
+<h4 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h4><p>元注解、自定义注解、Java中常用注解使用、注解与反射的结合</p>
+<h4 id="JMS"><a href="#JMS" class="headerlink" title="JMS"></a>JMS</h4><p>什么是Java消息服务、JMS消息传送模型</p>
+<h4 id="JMX"><a href="#JMX" class="headerlink" title="JMX"></a>JMX</h4><p>java.lang.management.<em>、 javax.management.</em></p>
+<h4 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h4><p>泛型与继承</p>
+<h4 id="类型擦除"><a href="#类型擦除" class="headerlink" title="类型擦除"></a>类型擦除</h4><p>泛型中K T V E  </p>
+<p>object等的含义、泛型各种用法</p>
+<h4 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h4><p>junit、mock、mockito、内存数据库（h2）</p>
+<h4 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h4><p>java.lang.util.regex.*</p>
+<h4 id="常用的Java工具库"><a href="#常用的Java工具库" class="headerlink" title="常用的Java工具库"></a>常用的Java工具库</h4><p>commons.lang, commons.*… guava-libraries netty</p>
+<h4 id="什么是API-amp-SPI"><a href="#什么是API-amp-SPI" class="headerlink" title="什么是API&amp;SPI"></a>什么是API&amp;SPI</h4><h4 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h4><p>异常类型、正确处理异常、自定义异常</p>
+<h4 id="时间处理"><a href="#时间处理" class="headerlink" title="时间处理"></a>时间处理</h4><p>时区、时令、Java中时间API</p>
+<h4 id="编码方式"><a href="#编码方式" class="headerlink" title="编码方式"></a>编码方式</h4><p>解决乱码问题、常用编码方式</p>
+<h4 id="语法糖"><a href="#语法糖" class="headerlink" title="语法糖"></a>语法糖</h4><p>Java中语法糖原理、解语法糖</p>
+<h4 id="Java并发编程"><a href="#Java并发编程" class="headerlink" title="Java并发编程"></a>Java并发编程</h4><p>什么是线程，与进程的区别<br>阅读源代码，并学会使用<br>Thread、Runnable、Callable、ReentrantLock、ReentrantReadWriteLock、Atomic*、Semaphore、CountDownLatch、、ConcurrentHashMap、Executors</p>
+<h4 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h4><p>自己设计线程池、submit() 和 execute()</p>
+<h4 id="线程安全"><a href="#线程安全" class="headerlink" title="线程安全"></a>线程安全</h4><p>死锁、死锁如何排查、Java线程调度、线程安全和内存模型的关系</p>
+<h4 id="锁"><a href="#锁" class="headerlink" title="锁"></a>锁</h4><p>CAS、乐观锁与悲观锁、数据库相关锁机制、分布式锁、偏向锁、轻量级锁、重量级锁、monitor、锁优化、锁消除、锁粗化、自旋锁、可重入锁、阻塞锁、死锁</p>
+<h4 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h4><p>volatile<br>happens-before、编译器指令重排和CPU指令重</p>
+<h4 id="synchronized"><a href="#synchronized" class="headerlink" title="synchronized"></a>synchronized</h4><p>synchronized是如何实现的？</p>
+<h4 id="synchronized和lock之间关系"><a href="#synchronized和lock之间关系" class="headerlink" title="synchronized和lock之间关系"></a>synchronized和lock之间关系</h4><p>不使用synchronized如何实现一个线程安全的单例</p>
+<h4 id="sleep-和-wait"><a href="#sleep-和-wait" class="headerlink" title="sleep 和 wait"></a>sleep 和 wait</h4><p>wait 和 notify<br>notify 和 notifyAll<br>ThreadLocal<br>写一个死锁的程序<br>写代码来解决生产者消费者问题<br>守护线程<br>守护线程和非守护线程的区别以及用法</p>
+<hr>
+<h3 id="二、JVM"><a href="#二、JVM" class="headerlink" title="二、JVM"></a>二、JVM</h3><h4 id=""><a href="#" class="headerlink" title=""></a><a href="/posts/27692/" title="JVM内存结构">JVM内存结构</a></h4><p>堆、栈、方法区、直接内存、堆和栈区别</p>
+<h4 id="Java内存模型"><a href="#Java内存模型" class="headerlink" title="Java内存模型"></a>Java内存模型</h4><p>内存可见性、重排序、顺序一致性、volatile、锁、final</p>
+<h4 id="垃圾回收"><a href="#垃圾回收" class="headerlink" title="垃圾回收"></a>垃圾回收</h4><p>内存分配策略、垃圾收集器（G1）、GC算法、GC参数、对象存活的判定 </p>
+<h4 id="JVM参数及调优"><a href="#JVM参数及调优" class="headerlink" title="JVM参数及调优"></a>JVM参数及调优</h4><p>Java对象模型<br>oop-klass、对象头</p>
+<h4 id="HotSpot"><a href="#HotSpot" class="headerlink" title="HotSpot"></a>HotSpot</h4><p>即时编译器、编译优化</p>
+<h4 id="类加载机制"><a href="#类加载机制" class="headerlink" title="类加载机制"></a>类加载机制</h4><p>classLoader、类加载过程、双亲委派（破坏双亲委派）、模块化（jboss modules、osgi、jigsaw）</p>
+<h4 id="虚拟机性能监控与故障处理工具"><a href="#虚拟机性能监控与故障处理工具" class="headerlink" title="虚拟机性能监控与故障处理工具"></a>虚拟机性能监控与故障处理工具</h4><p>jps, jstack, jmap、jstat, jconsole, jinfo, jhat, javap, btrace、TProfiler</p>
+<h4 id="编译与反编译"><a href="#编译与反编译" class="headerlink" title="编译与反编译"></a>编译与反编译</h4><p>javac 、javap 、jad 、CRF</p>
+<hr>
+<h3 id="三、-进阶篇"><a href="#三、-进阶篇" class="headerlink" title="三、 进阶篇"></a>三、 进阶篇</h3><h4 id="Java底层知识"><a href="#Java底层知识" class="headerlink" title="Java底层知识"></a>Java底层知识</h4><p>字节码、class文件格式<br>CPU缓存，L1，L2，L3和伪共享<br>尾递归<br>位运算<br>用位运算实现加、减、乘、除、取余</p>
+<h4 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h4><p>了解23种设计模式<br>会使用常用设计模式<br>单例、策略、工厂、适配器、责任链。</p>
+<h4 id="实现AOP"><a href="#实现AOP" class="headerlink" title="实现AOP"></a>实现AOP</h4><h4 id="实现IOC"><a href="#实现IOC" class="headerlink" title="实现IOC"></a>实现IOC</h4><h4 id="不用synchronized和lock，实现线程安全的单例模式"><a href="#不用synchronized和lock，实现线程安全的单例模式" class="headerlink" title="不用synchronized和lock，实现线程安全的单例模式"></a>不用synchronized和lock，实现线程安全的单例模式</h4><h4 id="nio和reactor设计模式"><a href="#nio和reactor设计模式" class="headerlink" title="nio和reactor设计模式"></a>nio和reactor设计模式</h4><h4 id="网络编程"><a href="#网络编程" class="headerlink" title="网络编程"></a>网络编程</h4><h4 id="tcp、udp、http、https等常用协议"><a href="#tcp、udp、http、https等常用协议" class="headerlink" title="tcp、udp、http、https等常用协议"></a>tcp、udp、http、https等常用协议</h4><h4 id="三次握手与四次关闭、流量控制和拥塞控制、OSI七层模型、tcp粘包与拆包"><a href="#三次握手与四次关闭、流量控制和拥塞控制、OSI七层模型、tcp粘包与拆包" class="headerlink" title="三次握手与四次关闭、流量控制和拥塞控制、OSI七层模型、tcp粘包与拆包"></a>三次握手与四次关闭、流量控制和拥塞控制、OSI七层模型、tcp粘包与拆包</h4><h4 id="http-1-0-http-1-1-http-2之前的区别"><a href="#http-1-0-http-1-1-http-2之前的区别" class="headerlink" title="http/1.0 http/1.1 http/2之前的区别"></a>http/1.0 http/1.1 http/2之前的区别</h4><h4 id="Java-RMI，Socket，HttpClient"><a href="#Java-RMI，Socket，HttpClient" class="headerlink" title="Java RMI，Socket，HttpClient"></a>Java RMI，Socket，HttpClient</h4><h4 id="cookie-与-session"><a href="#cookie-与-session" class="headerlink" title="cookie 与 session"></a>cookie 与 session</h4><h4 id="cookie被禁用，如何实现session"><a href="#cookie被禁用，如何实现session" class="headerlink" title="cookie被禁用，如何实现session"></a>cookie被禁用，如何实现session</h4><h4 id="用Java写一个简单的静态文件的HTTP服务器"><a href="#用Java写一个简单的静态文件的HTTP服务器" class="headerlink" title="用Java写一个简单的静态文件的HTTP服务器"></a>用Java写一个简单的静态文件的HTTP服务器</h4><p>实现客户端缓存功能，支持返回304 实现可并发下载一个文件 使用线程池处理客户端请求 使用nio处理客户端请求 支持简单的rewrite规则 上述功能在实现的时候需要满足“开闭原则”</p>
+<h4 id="了解nginx和apache服务器的特性并搭建一个对应的服务器"><a href="#了解nginx和apache服务器的特性并搭建一个对应的服务器" class="headerlink" title="了解nginx和apache服务器的特性并搭建一个对应的服务器"></a>了解nginx和apache服务器的特性并搭建一个对应的服务器</h4><h4 id="用Java实现FTP、SMTP协议"><a href="#用Java实现FTP、SMTP协议" class="headerlink" title="用Java实现FTP、SMTP协议"></a>用Java实现FTP、SMTP协议</h4><h4 id="进程间通讯的方式"><a href="#进程间通讯的方式" class="headerlink" title="进程间通讯的方式"></a>进程间通讯的方式</h4><h4 id="什么是CDN？如果实现？"><a href="#什么是CDN？如果实现？" class="headerlink" title="什么是CDN？如果实现？"></a>什么是CDN？如果实现？</h4><h4 id="什么是DNS？"><a href="#什么是DNS？" class="headerlink" title="什么是DNS？"></a>什么是DNS？</h4><h4 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h4><h4 id="框架知识"><a href="#框架知识" class="headerlink" title="框架知识"></a>框架知识</h4><h4 id="Servlet线程安全问题"><a href="#Servlet线程安全问题" class="headerlink" title="Servlet线程安全问题"></a>Servlet线程安全问题</h4><h4 id="Servlet中的filter和listener"><a href="#Servlet中的filter和listener" class="headerlink" title="Servlet中的filter和listener"></a>Servlet中的filter和listener</h4><h4 id="Hibernate的缓存机制"><a href="#Hibernate的缓存机制" class="headerlink" title="Hibernate的缓存机制"></a>Hibernate的缓存机制</h4><h4 id="Hiberate的懒加载"><a href="#Hiberate的懒加载" class="headerlink" title="Hiberate的懒加载"></a>Hiberate的懒加载</h4><h4 id="Spring-Bean的初始化"><a href="#Spring-Bean的初始化" class="headerlink" title="Spring Bean的初始化"></a>Spring Bean的初始化</h4><h4 id="Spring的AOP原理"><a href="#Spring的AOP原理" class="headerlink" title="Spring的AOP原理"></a>Spring的AOP原理</h4><h4 id="自己实现Spring的IOC"><a href="#自己实现Spring的IOC" class="headerlink" title="自己实现Spring的IOC"></a>自己实现Spring的IOC</h4><h4 id="Spring-MVC"><a href="#Spring-MVC" class="headerlink" title="Spring MVC"></a>Spring MVC</h4><h4 id="Spring-Boot2-0"><a href="#Spring-Boot2-0" class="headerlink" title="Spring Boot2.0"></a>Spring Boot2.0</h4><h4 id="Spring-Boot的starter原理，自己实现一个starter"><a href="#Spring-Boot的starter原理，自己实现一个starter" class="headerlink" title="Spring Boot的starter原理，自己实现一个starter"></a>Spring Boot的starter原理，自己实现一个starter</h4><h4 id="Spring-Security"><a href="#Spring-Security" class="headerlink" title="Spring Security"></a>Spring Security</h4><h4 id="应用服务器"><a href="#应用服务器" class="headerlink" title="应用服务器"></a>应用服务器</h4><h4 id="JBoss"><a href="#JBoss" class="headerlink" title="JBoss"></a>JBoss</h4><h4 id="tomcat"><a href="#tomcat" class="headerlink" title="tomcat"></a>tomcat</h4><h4 id="jetty"><a href="#jetty" class="headerlink" title="jetty"></a>jetty</h4><h4 id="Weblogic"><a href="#Weblogic" class="headerlink" title="Weblogic"></a>Weblogic</h4><h4 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h4><h4 id="git-amp-svn"><a href="#git-amp-svn" class="headerlink" title="git &amp; svn"></a>git &amp; svn</h4><h4 id="maven-amp-gradle"><a href="#maven-amp-gradle" class="headerlink" title="maven &amp; gradle"></a>maven &amp; gradle</h4><hr>
+<h3 id="四、-高级篇"><a href="#四、-高级篇" class="headerlink" title="四、 高级篇"></a>四、 高级篇</h3><p>新技术</p>
+<h4 id="Java-8"><a href="#Java-8" class="headerlink" title="Java 8"></a>Java 8</h4><p>lambda表达式、Stream API、</p>
+<h4 id="Java-9"><a href="#Java-9" class="headerlink" title="Java 9"></a>Java 9</h4><p>Jigsaw、Jshell、Reactive Streams</p>
+<h4 id="Java-10"><a href="#Java-10" class="headerlink" title="Java 10"></a>Java 10</h4><p>局部变量类型推断、G1的并行Full GC、ThreadLocal握手机制</p>
+<h4 id="Spring-5"><a href="#Spring-5" class="headerlink" title="Spring 5"></a>Spring 5</h4><p>响应式编程</p>
+<h4 id="Spring-Boot-2-0"><a href="#Spring-Boot-2-0" class="headerlink" title="Spring Boot 2.0"></a>Spring Boot 2.0</h4><p>性能优化<br>使用单例、使用Future模式、使用线程池、选择就绪、减少上下文切换、减少锁粒度、数据压缩、结果缓存</p>
+<h4 id="线上问题分析"><a href="#线上问题分析" class="headerlink" title="线上问题分析"></a>线上问题分析</h4><p>dump获取<br>线程Dump、内存Dump、gc情况</p>
+<h4 id="dump分析"><a href="#dump分析" class="headerlink" title="dump分析"></a>dump分析</h4><p>分析死锁、分析内存泄露</p>
+<h4 id="自己编写各种outofmemory，stackoverflow程序"><a href="#自己编写各种outofmemory，stackoverflow程序" class="headerlink" title="自己编写各种outofmemory，stackoverflow程序"></a>自己编写各种outofmemory，stackoverflow程序</h4><p>HeapOutOfMemory、 Young OutOfMemory、MethodArea OutOfMemory、ConstantPool OutOfMemory、DirectMemory OutOfMemory、Stack OutOfMemory Stack OverFlow</p>
+<h4 id="常见问题解决思路"><a href="#常见问题解决思路" class="headerlink" title="常见问题解决思路"></a>常见问题解决思路</h4><p>内存溢出、线程死锁、类加载冲突</p>
+<h4 id="使用工具尝试解决以下问题，并写下总结"><a href="#使用工具尝试解决以下问题，并写下总结" class="headerlink" title="使用工具尝试解决以下问题，并写下总结"></a>使用工具尝试解决以下问题，并写下总结</h4><p>当一个Java程序响应很慢时如何查找问题、</p>
+<h4 id="当一个Java程序频繁FullGC时如何解决问题、"><a href="#当一个Java程序频繁FullGC时如何解决问题、" class="headerlink" title="当一个Java程序频繁FullGC时如何解决问题、"></a>当一个Java程序频繁FullGC时如何解决问题、</h4><h4 id="如何查看垃圾回收日志、"><a href="#如何查看垃圾回收日志、" class="headerlink" title="如何查看垃圾回收日志、"></a>如何查看垃圾回收日志、</h4><h4 id="当一个Java应用发生OutOfMemory时该如何解决、"><a href="#当一个Java应用发生OutOfMemory时该如何解决、" class="headerlink" title="当一个Java应用发生OutOfMemory时该如何解决、"></a>当一个Java应用发生OutOfMemory时该如何解决、</h4><h4 id="如何判断是否出现死锁、"><a href="#如何判断是否出现死锁、" class="headerlink" title="如何判断是否出现死锁、"></a>如何判断是否出现死锁、</h4><h4 id="如何判断是否存在内存泄露"><a href="#如何判断是否存在内存泄露" class="headerlink" title="如何判断是否存在内存泄露"></a>如何判断是否存在内存泄露</h4><h4 id="编译原理知识"><a href="#编译原理知识" class="headerlink" title="编译原理知识"></a>编译原理知识</h4><ul>
+<li>编译与反编译</li>
+<li>Java代码的编译与反编译</li>
+<li>Java的反编译工具</li>
+<li>词法分析，语法分析（LL算法，递归下降算法，LR算法），语义分析，运行时环境，中间代码，代码生成，代码优化</li>
+<li>操作系统知识</li>
+<li>Linux的常用命令</li>
+<li>进程同步</li>
+<li>缓冲区溢出</li>
+<li>分段和分页</li>
+<li>虚拟内存与主存</li>
+<li>数据库知识</li>
+<li>MySql 执行引擎</li>
+<li>MySQL 执行计划</li>
+<li>如何查看执行计划，如何根据执行计划进行SQL优化</li>
+</ul>
+<h4 id="SQL优化"><a href="#SQL优化" class="headerlink" title="SQL优化"></a>SQL优化</h4><ul>
+<li>事务：事务的隔离级别、事务能不能实现锁的功能</li>
+<li>数据库锁：行锁、表锁、使用数据库锁实现乐观锁、</li>
+<li>数据库主备搭建</li>
+<li>binlog</li>
+<li>内存数据库</li>
+<li>h2</li>
+<li>常用的nosql数据库</li>
+<li>redis、memcached</li>
+<li>分别使用数据库锁、NoSql实现分布式锁</li>
+<li>性能调优</li>
+</ul>
+<hr>
+<h3 id="五、数据结构与算法知识"><a href="#五、数据结构与算法知识" class="headerlink" title="五、数据结构与算法知识"></a>五、数据结构与算法知识</h3><h4 id="简单的数据结构"><a href="#简单的数据结构" class="headerlink" title="简单的数据结构"></a>简单的数据结构</h4><ul>
+<li>栈</li>
+<li>队列</li>
+<li>链表</li>
+<li>数组</li>
+<li>哈希表、</li>
+</ul>
+<h4 id="树"><a href="#树" class="headerlink" title="树"></a>树</h4><ul>
+<li>二叉树</li>
+<li>字典树</li>
+<li>平衡树</li>
+<li>排序树</li>
+<li>B树</li>
+<li>B+树</li>
+<li>R树</li>
+<li>多路树</li>
+<li>红黑树</li>
+</ul>
+<h4 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h4><ul>
+<li>八大排序算法实现</li>
+<li>各种排序算法和时间复杂度 </li>
+<li>深度优先和广度优先搜索 </li>
+<li>全排列</li>
+<li>贪心算法</li>
+<li>KMP算法</li>
+<li>hash算法</li>
+<li>海量数据处理</li>
+</ul>
+<h4 id="大数据知识"><a href="#大数据知识" class="headerlink" title="大数据知识"></a>大数据知识</h4><ul>
+<li>Zookeeper基本概念、常见用法</li>
+<li>Solr，Lucene，ElasticSearch在linux上部署solr，solrcloud，，新增、删除、查询索引</li>
+<li>Storm，流式计算，了解Spark，S4在linux上部署storm，用zookeeper做协调，运行storm hello world，local和remote模式运行调试storm topology。</li>
+<li>Hadoop，离线计算HDFS、MapReduce</li>
+<li>分布式日志收集flume，kafka，logstash数据挖掘，mahout</li>
+</ul>
+<h4 id="网络安全知识"><a href="#网络安全知识" class="headerlink" title="网络安全知识"></a>网络安全知识</h4><ul>
+<li>什么是XSS</li>
+<li>XSS的防御</li>
+<li>什么是CSRF</li>
+<li>什么是注入攻击</li>
+<li>SQL注入、XML注入、CRLF注入</li>
+<li>什么是文件上传漏洞</li>
+<li>加密与解密</li>
+<li>MD5，SHA1、DES、AES、RSA、DSA</li>
+<li>什么是DOS攻击和DDOS攻击</li>
+<li>memcached为什么可以导致DDos攻击、什么是反射型DDoS</li>
+<li>SSL、TLS，HTTPS</li>
+<li>如何通过Hash碰撞进行DOS攻击</li>
+<li>用openssl签一个证书部署到apache或nginx</li>
+</ul>
+<hr>
+<h3 id="六、架构篇"><a href="#六、架构篇" class="headerlink" title="六、架构篇"></a>六、架构篇</h3><h4 id="分布式"><a href="#分布式" class="headerlink" title="分布式"></a>分布式</h4><p>数据一致性、服务治理、服务降级</p>
+<h4 id="分布式事务"><a href="#分布式事务" class="headerlink" title="分布式事务"></a>分布式事务</h4><p>2PC、3PC、CAP、BASE、 可靠消息最终一致性、最大努力通知、TCC</p>
+<h4 id="Dubbo"><a href="#Dubbo" class="headerlink" title="Dubbo"></a>Dubbo</h4><p>服务注册、服务发现，服务治理</p>
+<h4 id="分布式数据库"><a href="#分布式数据库" class="headerlink" title="分布式数据库"></a>分布式数据库</h4><p>怎样打造一个分布式数据库、什么时候需要分布式数据库、mycat、otter、HBase</p>
+<h4 id="分布式文件系统"><a href="#分布式文件系统" class="headerlink" title="分布式文件系统"></a>分布式文件系统</h4><p>mfs、fastdfs</p>
+<h4 id="分布式缓存"><a href="#分布式缓存" class="headerlink" title="分布式缓存"></a>分布式缓存</h4><p>缓存一致性、缓存命中率、缓存冗余</p>
+<h4 id="微服务"><a href="#微服务" class="headerlink" title="微服务"></a>微服务</h4><p>SOA、康威定律</p>
+<h4 id="Tencent-Tars"><a href="#Tencent-Tars" class="headerlink" title="Tencent Tars"></a>Tencent Tars</h4><h4 id="ServiceMesh"><a href="#ServiceMesh" class="headerlink" title="ServiceMesh"></a>ServiceMesh</h4><h4 id="Docker-amp-Kubernets"><a href="#Docker-amp-Kubernets" class="headerlink" title="Docker &amp; Kubernets"></a>Docker &amp; Kubernets</h4><h4 id="Spring-Boot"><a href="#Spring-Boot" class="headerlink" title="Spring Boot"></a>Spring Boot</h4><h4 id="Spring-Cloud"><a href="#Spring-Cloud" class="headerlink" title="Spring Cloud"></a>Spring Cloud</h4><h4 id="高并发"><a href="#高并发" class="headerlink" title="高并发"></a>高并发</h4><h4 id="分库分表"><a href="#分库分表" class="headerlink" title="分库分表"></a>分库分表</h4><h4 id="CDN技术"><a href="#CDN技术" class="headerlink" title="CDN技术"></a>CDN技术</h4><h4 id="消息队列"><a href="#消息队列" class="headerlink" title="消息队列"></a>消息队列</h4><h4 id="ActiveMQ"><a href="#ActiveMQ" class="headerlink" title="ActiveMQ"></a>ActiveMQ</h4><h4 id="监控"><a href="#监控" class="headerlink" title="监控"></a>监控</h4><p>监控什么<br>CPU、内存、磁盘I/O、网络I/O等</p>
+<h4 id="监控手段"><a href="#监控手段" class="headerlink" title="监控手段"></a>监控手段</h4><p>进程监控、语义监控、机器资源监控、数据波动</p>
+<h4 id="监控数据采集"><a href="#监控数据采集" class="headerlink" title="监控数据采集"></a>监控数据采集</h4><p>日志、埋点</p>
+<h4 id="Dapper"><a href="#Dapper" class="headerlink" title="Dapper"></a>Dapper</h4><p>负载均衡<br>tomcat负载均衡、Nginx负载均衡</p>
+<h4 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h4><p>DNS原理、DNS的设计</p>
+<h4 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h4><p>数据一致性</p>
+<hr>
+<h3 id="七、-扩展篇"><a href="#七、-扩展篇" class="headerlink" title="七、 扩展篇"></a>七、 扩展篇</h3><h4 id="云计算"><a href="#云计算" class="headerlink" title="云计算"></a>云计算</h4><p>IaaS、SaaS、PaaS、虚拟化技术、openstack、cloudstack、Serverlsess</p>
+<h4 id="搜索引擎"><a href="#搜索引擎" class="headerlink" title="搜索引擎"></a>搜索引擎</h4><p>Solr、Lucene、Nutch、Elasticsearch</p>
+<h4 id="权限管理"><a href="#权限管理" class="headerlink" title="权限管理"></a>权限管理</h4><p>Shiro</p>
+<h4 id="区块链"><a href="#区块链" class="headerlink" title="区块链"></a>区块链</h4><p>哈希算法、Merkle树、公钥密码算法、共识算法、Raft协议、Paxos 算法与 Raft 算法、拜占庭问题与算法、消息认证码与数字签名</p>
+<h4 id="比特币"><a href="#比特币" class="headerlink" title="比特币"></a>比特币</h4><p>挖矿、共识机制、闪电网络、侧链、热点问题、分叉</p>
+<h4 id="以太坊"><a href="#以太坊" class="headerlink" title="以太坊"></a>以太坊</h4><p>超级账本</p>
+<h4 id="人工智能"><a href="#人工智能" class="headerlink" title="人工智能"></a>人工智能</h4><p>数学基础、机器学习、人工神经网络、深度学习、应用场景。</p>
+<h4 id="常用框架"><a href="#常用框架" class="headerlink" title="常用框架"></a>常用框架</h4><p>TensorFlow、DeepLearning4J</p>
+<h4 id="其他语言"><a href="#其他语言" class="headerlink" title="其他语言"></a>其他语言</h4><p>Groovy、Python、Go、NodeJs、Swift、Rust</p>
+<blockquote>
+<p>3/26/2018 10:40:04 PM<br>引用文献：<br><a href="https://mp.weixin.qq.com/s/UKwZkwYmDSVTbj62ACuapg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/UKwZkwYmDSVTbj62ACuapg</a></p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    华仔
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://fanghuafan.github.io/posts/3353/" title="Java知识体系">https://fanghuafan.github.io/posts/3353/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JAVA/" rel="tag"># JAVA</a>
+          
+            <a href="/tags/知识体系/" rel="tag"># 知识体系</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/29847/" rel="next" title="leetcode-no4">
+                <i class="fa fa-chevron-left"></i> leetcode-no4
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/38677/" rel="prev" title="String源码研究">
+                String源码研究 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="华仔" />
+            
+              <p class="site-author-name" itemprop="name">华仔</p>
+              <p class="site-description motion-element" itemprop="description">活着是一种艺术</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/fanghuafan" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:fanghua.code@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com//6508980263" target="_blank" title="微博">
+                      
+                        <i class="fa fa-fw fa-globe"></i>微博</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.zhihu.com/people/hua-zi-33-43" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-globe"></i>知乎</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                个人其它博客
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.cnblogs.com/GodBug/" title="QuestCode【博客园】" target="_blank">QuestCode【博客园】</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://blog.csdn.net/Confidence_Surmount" title="Confidence_Surmount【CSDN】" target="_blank">Confidence_Surmount【CSDN】</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、Java基础知识"><span class="nav-number">1.</span> <span class="nav-text">一、Java基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#阅读源代码"><span class="nav-number">1.1.</span> <span class="nav-text">阅读源代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java中各种变量类型"><span class="nav-number">1.2.</span> <span class="nav-text">Java中各种变量类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#replaceFirst、replaceAll、replace区别"><span class="nav-number">1.3.</span> <span class="nav-text">replaceFirst、replaceAll、replace区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#String对“-”的重载、"><span class="nav-number">1.4.</span> <span class="nav-text">String对“+”的重载、</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#String-valueOf和Integer-toString的区别"><span class="nav-number">1.5.</span> <span class="nav-text">String.valueOf和Integer.toString的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串的不可变性"><span class="nav-number">1.6.</span> <span class="nav-text">字符串的不可变性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自动拆装箱"><span class="nav-number">1.7.</span> <span class="nav-text">自动拆装箱</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#熟悉Java中各种关键字"><span class="nav-number">1.8.</span> <span class="nav-text">熟悉Java中各种关键字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#集合类"><span class="nav-number">1.9.</span> <span class="nav-text">集合类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#枚举"><span class="nav-number">1.10.</span> <span class="nav-text">枚举</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java-IO-amp-Java-NIO，并学会使用"><span class="nav-number">1.11.</span> <span class="nav-text">Java IO&amp;Java NIO，并学会使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java反射与javassist"><span class="nav-number">1.12.</span> <span class="nav-text">Java反射与javassist</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java序列化"><span class="nav-number">1.13.</span> <span class="nav-text">Java序列化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#序列化底层原理"><span class="nav-number">1.14.</span> <span class="nav-text">序列化底层原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注解"><span class="nav-number">1.15.</span> <span class="nav-text">注解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JMS"><span class="nav-number">1.16.</span> <span class="nav-text">JMS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JMX"><span class="nav-number">1.17.</span> <span class="nav-text">JMX</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型"><span class="nav-number">1.18.</span> <span class="nav-text">泛型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类型擦除"><span class="nav-number">1.19.</span> <span class="nav-text">类型擦除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#单元测试"><span class="nav-number">1.20.</span> <span class="nav-text">单元测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正则表达式"><span class="nav-number">1.21.</span> <span class="nav-text">正则表达式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的Java工具库"><span class="nav-number">1.22.</span> <span class="nav-text">常用的Java工具库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是API-amp-SPI"><span class="nav-number">1.23.</span> <span class="nav-text">什么是API&amp;SPI</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#异常"><span class="nav-number">1.24.</span> <span class="nav-text">异常</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#时间处理"><span class="nav-number">1.25.</span> <span class="nav-text">时间处理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编码方式"><span class="nav-number">1.26.</span> <span class="nav-text">编码方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#语法糖"><span class="nav-number">1.27.</span> <span class="nav-text">语法糖</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java并发编程"><span class="nav-number">1.28.</span> <span class="nav-text">Java并发编程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#线程池"><span class="nav-number">1.29.</span> <span class="nav-text">线程池</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#线程安全"><span class="nav-number">1.30.</span> <span class="nav-text">线程安全</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#锁"><span class="nav-number">1.31.</span> <span class="nav-text">锁</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#死锁"><span class="nav-number">1.32.</span> <span class="nav-text">死锁</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#synchronized"><span class="nav-number">1.33.</span> <span class="nav-text">synchronized</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#synchronized和lock之间关系"><span class="nav-number">1.34.</span> <span class="nav-text">synchronized和lock之间关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sleep-和-wait"><span class="nav-number">1.35.</span> <span class="nav-text">sleep 和 wait</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、JVM"><span class="nav-number">2.</span> <span class="nav-text">二、JVM</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#"><span class="nav-number">2.1.</span> <span class="nav-text">JVM内存结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java内存模型"><span class="nav-number">2.2.</span> <span class="nav-text">Java内存模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#垃圾回收"><span class="nav-number">2.3.</span> <span class="nav-text">垃圾回收</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JVM参数及调优"><span class="nav-number">2.4.</span> <span class="nav-text">JVM参数及调优</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HotSpot"><span class="nav-number">2.5.</span> <span class="nav-text">HotSpot</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类加载机制"><span class="nav-number">2.6.</span> <span class="nav-text">类加载机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#虚拟机性能监控与故障处理工具"><span class="nav-number">2.7.</span> <span class="nav-text">虚拟机性能监控与故障处理工具</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编译与反编译"><span class="nav-number">2.8.</span> <span class="nav-text">编译与反编译</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、-进阶篇"><span class="nav-number">3.</span> <span class="nav-text">三、 进阶篇</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Java底层知识"><span class="nav-number">3.1.</span> <span class="nav-text">Java底层知识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设计模式"><span class="nav-number">3.2.</span> <span class="nav-text">设计模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现AOP"><span class="nav-number">3.3.</span> <span class="nav-text">实现AOP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现IOC"><span class="nav-number">3.4.</span> <span class="nav-text">实现IOC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不用synchronized和lock，实现线程安全的单例模式"><span class="nav-number">3.5.</span> <span class="nav-text">不用synchronized和lock，实现线程安全的单例模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nio和reactor设计模式"><span class="nav-number">3.6.</span> <span class="nav-text">nio和reactor设计模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网络编程"><span class="nav-number">3.7.</span> <span class="nav-text">网络编程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tcp、udp、http、https等常用协议"><span class="nav-number">3.8.</span> <span class="nav-text">tcp、udp、http、https等常用协议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三次握手与四次关闭、流量控制和拥塞控制、OSI七层模型、tcp粘包与拆包"><span class="nav-number">3.9.</span> <span class="nav-text">三次握手与四次关闭、流量控制和拥塞控制、OSI七层模型、tcp粘包与拆包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#http-1-0-http-1-1-http-2之前的区别"><span class="nav-number">3.10.</span> <span class="nav-text">http/1.0 http/1.1 http/2之前的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java-RMI，Socket，HttpClient"><span class="nav-number">3.11.</span> <span class="nav-text">Java RMI，Socket，HttpClient</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cookie-与-session"><span class="nav-number">3.12.</span> <span class="nav-text">cookie 与 session</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cookie被禁用，如何实现session"><span class="nav-number">3.13.</span> <span class="nav-text">cookie被禁用，如何实现session</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用Java写一个简单的静态文件的HTTP服务器"><span class="nav-number">3.14.</span> <span class="nav-text">用Java写一个简单的静态文件的HTTP服务器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#了解nginx和apache服务器的特性并搭建一个对应的服务器"><span class="nav-number">3.15.</span> <span class="nav-text">了解nginx和apache服务器的特性并搭建一个对应的服务器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用Java实现FTP、SMTP协议"><span class="nav-number">3.16.</span> <span class="nav-text">用Java实现FTP、SMTP协议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进程间通讯的方式"><span class="nav-number">3.17.</span> <span class="nav-text">进程间通讯的方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是CDN？如果实现？"><span class="nav-number">3.18.</span> <span class="nav-text">什么是CDN？如果实现？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是DNS？"><span class="nav-number">3.19.</span> <span class="nav-text">什么是DNS？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#反向代理"><span class="nav-number">3.20.</span> <span class="nav-text">反向代理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#框架知识"><span class="nav-number">3.21.</span> <span class="nav-text">框架知识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Servlet线程安全问题"><span class="nav-number">3.22.</span> <span class="nav-text">Servlet线程安全问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Servlet中的filter和listener"><span class="nav-number">3.23.</span> <span class="nav-text">Servlet中的filter和listener</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Hibernate的缓存机制"><span class="nav-number">3.24.</span> <span class="nav-text">Hibernate的缓存机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Hiberate的懒加载"><span class="nav-number">3.25.</span> <span class="nav-text">Hiberate的懒加载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spring-Bean的初始化"><span class="nav-number">3.26.</span> <span class="nav-text">Spring Bean的初始化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spring的AOP原理"><span class="nav-number">3.27.</span> <span class="nav-text">Spring的AOP原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自己实现Spring的IOC"><span class="nav-number">3.28.</span> <span class="nav-text">自己实现Spring的IOC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spring-MVC"><span class="nav-number">3.29.</span> <span class="nav-text">Spring MVC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spring-Boot2-0"><span class="nav-number">3.30.</span> <span class="nav-text">Spring Boot2.0</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spring-Boot的starter原理，自己实现一个starter"><span class="nav-number">3.31.</span> <span class="nav-text">Spring Boot的starter原理，自己实现一个starter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spring-Security"><span class="nav-number">3.32.</span> <span class="nav-text">Spring Security</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用服务器"><span class="nav-number">3.33.</span> <span class="nav-text">应用服务器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JBoss"><span class="nav-number">3.34.</span> <span class="nav-text">JBoss</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tomcat"><span class="nav-number">3.35.</span> <span class="nav-text">tomcat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jetty"><span class="nav-number">3.36.</span> <span class="nav-text">jetty</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Weblogic"><span class="nav-number">3.37.</span> <span class="nav-text">Weblogic</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#工具"><span class="nav-number">3.38.</span> <span class="nav-text">工具</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-amp-svn"><span class="nav-number">3.39.</span> <span class="nav-text">git &amp; svn</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#maven-amp-gradle"><span class="nav-number">3.40.</span> <span class="nav-text">maven &amp; gradle</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、-高级篇"><span class="nav-number">4.</span> <span class="nav-text">四、 高级篇</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Java-8"><span class="nav-number">4.1.</span> <span class="nav-text">Java 8</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java-9"><span class="nav-number">4.2.</span> <span class="nav-text">Java 9</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java-10"><span class="nav-number">4.3.</span> <span class="nav-text">Java 10</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spring-5"><span class="nav-number">4.4.</span> <span class="nav-text">Spring 5</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spring-Boot-2-0"><span class="nav-number">4.5.</span> <span class="nav-text">Spring Boot 2.0</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#线上问题分析"><span class="nav-number">4.6.</span> <span class="nav-text">线上问题分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#dump分析"><span class="nav-number">4.7.</span> <span class="nav-text">dump分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自己编写各种outofmemory，stackoverflow程序"><span class="nav-number">4.8.</span> <span class="nav-text">自己编写各种outofmemory，stackoverflow程序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常见问题解决思路"><span class="nav-number">4.9.</span> <span class="nav-text">常见问题解决思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用工具尝试解决以下问题，并写下总结"><span class="nav-number">4.10.</span> <span class="nav-text">使用工具尝试解决以下问题，并写下总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#当一个Java程序频繁FullGC时如何解决问题、"><span class="nav-number">4.11.</span> <span class="nav-text">当一个Java程序频繁FullGC时如何解决问题、</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何查看垃圾回收日志、"><span class="nav-number">4.12.</span> <span class="nav-text">如何查看垃圾回收日志、</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#当一个Java应用发生OutOfMemory时该如何解决、"><span class="nav-number">4.13.</span> <span class="nav-text">当一个Java应用发生OutOfMemory时该如何解决、</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何判断是否出现死锁、"><span class="nav-number">4.14.</span> <span class="nav-text">如何判断是否出现死锁、</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何判断是否存在内存泄露"><span class="nav-number">4.15.</span> <span class="nav-text">如何判断是否存在内存泄露</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编译原理知识"><span class="nav-number">4.16.</span> <span class="nav-text">编译原理知识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SQL优化"><span class="nav-number">4.17.</span> <span class="nav-text">SQL优化</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、数据结构与算法知识"><span class="nav-number">5.</span> <span class="nav-text">五、数据结构与算法知识</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#简单的数据结构"><span class="nav-number">5.1.</span> <span class="nav-text">简单的数据结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#树"><span class="nav-number">5.2.</span> <span class="nav-text">树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排序算法"><span class="nav-number">5.3.</span> <span class="nav-text">排序算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#大数据知识"><span class="nav-number">5.4.</span> <span class="nav-text">大数据知识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网络安全知识"><span class="nav-number">5.5.</span> <span class="nav-text">网络安全知识</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六、架构篇"><span class="nav-number">6.</span> <span class="nav-text">六、架构篇</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#分布式"><span class="nav-number">6.1.</span> <span class="nav-text">分布式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分布式事务"><span class="nav-number">6.2.</span> <span class="nav-text">分布式事务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dubbo"><span class="nav-number">6.3.</span> <span class="nav-text">Dubbo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分布式数据库"><span class="nav-number">6.4.</span> <span class="nav-text">分布式数据库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分布式文件系统"><span class="nav-number">6.5.</span> <span class="nav-text">分布式文件系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分布式缓存"><span class="nav-number">6.6.</span> <span class="nav-text">分布式缓存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#微服务"><span class="nav-number">6.7.</span> <span class="nav-text">微服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Tencent-Tars"><span class="nav-number">6.8.</span> <span class="nav-text">Tencent Tars</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ServiceMesh"><span class="nav-number">6.9.</span> <span class="nav-text">ServiceMesh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Docker-amp-Kubernets"><span class="nav-number">6.10.</span> <span class="nav-text">Docker &amp; Kubernets</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spring-Boot"><span class="nav-number">6.11.</span> <span class="nav-text">Spring Boot</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spring-Cloud"><span class="nav-number">6.12.</span> <span class="nav-text">Spring Cloud</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#高并发"><span class="nav-number">6.13.</span> <span class="nav-text">高并发</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分库分表"><span class="nav-number">6.14.</span> <span class="nav-text">分库分表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CDN技术"><span class="nav-number">6.15.</span> <span class="nav-text">CDN技术</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#消息队列"><span class="nav-number">6.16.</span> <span class="nav-text">消息队列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ActiveMQ"><span class="nav-number">6.17.</span> <span class="nav-text">ActiveMQ</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#监控"><span class="nav-number">6.18.</span> <span class="nav-text">监控</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#监控手段"><span class="nav-number">6.19.</span> <span class="nav-text">监控手段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#监控数据采集"><span class="nav-number">6.20.</span> <span class="nav-text">监控数据采集</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dapper"><span class="nav-number">6.21.</span> <span class="nav-text">Dapper</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DNS"><span class="nav-number">6.22.</span> <span class="nav-text">DNS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CDN"><span class="nav-number">6.23.</span> <span class="nav-text">CDN</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#七、-扩展篇"><span class="nav-number">7.</span> <span class="nav-text">七、 扩展篇</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#云计算"><span class="nav-number">7.1.</span> <span class="nav-text">云计算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#搜索引擎"><span class="nav-number">7.2.</span> <span class="nav-text">搜索引擎</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#权限管理"><span class="nav-number">7.3.</span> <span class="nav-text">权限管理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#区块链"><span class="nav-number">7.4.</span> <span class="nav-text">区块链</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#比特币"><span class="nav-number">7.5.</span> <span class="nav-text">比特币</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#以太坊"><span class="nav-number">7.6.</span> <span class="nav-text">以太坊</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#人工智能"><span class="nav-number">7.7.</span> <span class="nav-text">人工智能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用框架"><span class="nav-number">7.8.</span> <span class="nav-text">常用框架</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他语言"><span class="nav-number">7.9.</span> <span class="nav-text">其他语言</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">华仔</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">20.3k</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_sphere.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/love.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+      <style>
+        a.gitment-editor-footer-tip { display: none; }
+        .gitment-container.gitment-footer-container { display: none; }
+      </style>
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'fanghuafan',
+            repo: 'blog-comment',
+            
+            lang: "zh-Hans" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: 'f48d53aa2dc54222046866a1976030b43b7ce1d6',
+            
+                client_id: 'bc33ae560e4614c540b0'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("CKISx2aPmjhJlIVLtUP9j3Us-gzGzoHsz", "jpm1p4bD7IH80wgkKjSPTW1u");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+          flOptions.iconStyle = "box";
+      
+          flOptions.boxForm = "horizontal";
+      
+          flOptions.position = "middleRight";
+      
+          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+  
+
+  
+  
+
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
+
+  
+
+  
+  <!--undefined-->
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":"wanko","bottom":-30,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/"});</script></body>
+</html>
