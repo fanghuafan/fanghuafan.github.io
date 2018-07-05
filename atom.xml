@@ -531,11 +531,11 @@
   </entry>
   
   <entry>
-    <title>cloudstack删除zone方法</title>
-    <link href="https://fanghuafan.github.io/posts/28333/"/>
-    <id>https://fanghuafan.github.io/posts/28333/</id>
+    <title>Centos7.4 + Cloudstack4.11 + Xenserver7.2安装配置</title>
+    <link href="https://fanghuafan.github.io/posts/13794/"/>
+    <id>https://fanghuafan.github.io/posts/13794/</id>
     <published>2018-03-30T15:53:20.000Z</published>
-    <updated>2018-03-30T16:09:37.924Z</updated>
+    <updated>2018-04-07T03:31:56.602Z</updated>
     
     <summary type="html">
     
@@ -543,7 +543,7 @@
       
         
         
-          &lt;h5 id=&quot;登录mysql或者mariadb&quot;&gt;&lt;a href=&quot;#登录mysql或者mariadb&quot; class=&quot;headerlink&quot; title=&quot;登录mysql或者mariadb&quot;&gt;&lt;/a&gt;登录mysql或者mariadb&lt;/h5&gt;&lt;figure
+          &lt;p&gt;最近折腾了一下Cloudstack4.11+Xenserver7,2的安装，刚开始使用的Xenserver7.4，最后翻看Cloudstack Supported Hypervisor
         
       
     
