@@ -5,9 +5,9 @@
   <subtitle>Where there&#39;s a will, There&#39;s a way.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://fanghuafan.github.io/"/>
-  <updated>2018-07-03T14:59:33.397Z</updated>
-  <id>https://fanghuafan.github.io/</id>
+  <link href="http://www.jackfan.top/"/>
+  <updated>2018-07-07T10:25:19.617Z</updated>
+  <id>http://www.jackfan.top/</id>
   
   <author>
     <name>华仔</name>
@@ -17,9 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>GitLab Architecture</title>
+    <link href="http://www.jackfan.top/posts/53556/"/>
+    <id>http://www.jackfan.top/posts/53556/</id>
+    <published>2018-07-05T23:57:26.000Z</published>
+    <updated>2018-07-07T10:25:19.617Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、GitLab是什么？&quot;&gt;&lt;a href=&quot;#一、GitLab是什么？&quot; class=&quot;headerlink&quot; title=&quot;一、GitLab是什么？&quot;&gt;&lt;/a&gt;一、GitLab是什么？&lt;/h2&gt;&lt;p&gt;GitLab是由GitLab
+        
+      
+    
+    </summary>
+    
+      <category term="git" scheme="http://www.jackfan.top/categories/git/"/>
+    
+    
+      <category term="git" scheme="http://www.jackfan.top/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Jenkins学习</title>
-    <link href="https://fanghuafan.github.io/posts/32639/"/>
-    <id>https://fanghuafan.github.io/posts/32639/</id>
+    <link href="http://www.jackfan.top/posts/32639/"/>
+    <id>http://www.jackfan.top/posts/32639/</id>
     <published>2018-07-02T15:28:45.000Z</published>
     <updated>2018-07-03T14:59:33.397Z</updated>
     
@@ -35,17 +61,17 @@
     
     </summary>
     
-      <category term="Jenkins" scheme="https://fanghuafan.github.io/categories/Jenkins/"/>
+      <category term="Jenkins" scheme="http://www.jackfan.top/categories/Jenkins/"/>
     
     
-      <category term="Jenkins" scheme="https://fanghuafan.github.io/tags/Jenkins/"/>
+      <category term="Jenkins" scheme="http://www.jackfan.top/tags/Jenkins/"/>
     
   </entry>
   
   <entry>
     <title>Maven学习</title>
-    <link href="https://fanghuafan.github.io/posts/8081/"/>
-    <id>https://fanghuafan.github.io/posts/8081/</id>
+    <link href="http://www.jackfan.top/posts/8081/"/>
+    <id>http://www.jackfan.top/posts/8081/</id>
     <published>2018-07-01T23:33:38.000Z</published>
     <updated>2018-07-02T15:30:20.969Z</updated>
     
@@ -61,17 +87,17 @@
     
     </summary>
     
-      <category term="maven" scheme="https://fanghuafan.github.io/categories/maven/"/>
+      <category term="maven" scheme="http://www.jackfan.top/categories/maven/"/>
     
     
-      <category term="maven" scheme="https://fanghuafan.github.io/tags/maven/"/>
+      <category term="maven" scheme="http://www.jackfan.top/tags/maven/"/>
     
   </entry>
   
   <entry>
     <title>Git学习</title>
-    <link href="https://fanghuafan.github.io/posts/1/"/>
-    <id>https://fanghuafan.github.io/posts/1/</id>
+    <link href="http://www.jackfan.top/posts/1/"/>
+    <id>http://www.jackfan.top/posts/1/</id>
     <published>2018-07-01T00:41:26.000Z</published>
     <updated>2018-07-02T14:37:50.815Z</updated>
     
@@ -87,17 +113,17 @@
     
     </summary>
     
-      <category term="git" scheme="https://fanghuafan.github.io/categories/git/"/>
+      <category term="git" scheme="http://www.jackfan.top/categories/git/"/>
     
     
-      <category term="git" scheme="https://fanghuafan.github.io/tags/git/"/>
+      <category term="git" scheme="http://www.jackfan.top/tags/git/"/>
     
   </entry>
   
   <entry>
     <title>java(String)的replaceFirst、replaceAll、replace区别</title>
-    <link href="https://fanghuafan.github.io/posts/14145/"/>
-    <id>https://fanghuafan.github.io/posts/14145/</id>
+    <link href="http://www.jackfan.top/posts/14145/"/>
+    <id>http://www.jackfan.top/posts/14145/</id>
     <published>2018-06-29T23:13:14.000Z</published>
     <updated>2018-06-29T23:19:18.570Z</updated>
     
@@ -113,17 +139,17 @@
     
     </summary>
     
-      <category term="JAVA" scheme="https://fanghuafan.github.io/categories/JAVA/"/>
+      <category term="JAVA" scheme="http://www.jackfan.top/categories/JAVA/"/>
     
     
-      <category term="JAVA" scheme="https://fanghuafan.github.io/tags/JAVA/"/>
+      <category term="JAVA" scheme="http://www.jackfan.top/tags/JAVA/"/>
     
   </entry>
   
   <entry>
     <title>JQuery操作table的一些实现</title>
-    <link href="https://fanghuafan.github.io/posts/21846/"/>
-    <id>https://fanghuafan.github.io/posts/21846/</id>
+    <link href="http://www.jackfan.top/posts/21846/"/>
+    <id>http://www.jackfan.top/posts/21846/</id>
     <published>2018-06-14T23:41:47.000Z</published>
     <updated>2018-06-14T23:47:56.195Z</updated>
     
@@ -139,17 +165,17 @@
     
     </summary>
     
-      <category term="JQuery" scheme="https://fanghuafan.github.io/categories/JQuery/"/>
+      <category term="JQuery" scheme="http://www.jackfan.top/categories/JQuery/"/>
     
     
-      <category term="JQuery" scheme="https://fanghuafan.github.io/tags/JQuery/"/>
+      <category term="JQuery" scheme="http://www.jackfan.top/tags/JQuery/"/>
     
   </entry>
   
   <entry>
     <title>git暂存stash命令</title>
-    <link href="https://fanghuafan.github.io/posts/60448/"/>
-    <id>https://fanghuafan.github.io/posts/60448/</id>
+    <link href="http://www.jackfan.top/posts/60448/"/>
+    <id>http://www.jackfan.top/posts/60448/</id>
     <published>2018-06-14T23:21:07.000Z</published>
     <updated>2018-06-14T23:34:57.504Z</updated>
     
@@ -165,17 +191,17 @@
     
     </summary>
     
-      <category term="git" scheme="https://fanghuafan.github.io/categories/git/"/>
+      <category term="git" scheme="http://www.jackfan.top/categories/git/"/>
     
     
-      <category term="git" scheme="https://fanghuafan.github.io/tags/git/"/>
+      <category term="git" scheme="http://www.jackfan.top/tags/git/"/>
     
   </entry>
   
   <entry>
     <title>KVM+SPICE安装配置文档</title>
-    <link href="https://fanghuafan.github.io/posts/43868/"/>
-    <id>https://fanghuafan.github.io/posts/43868/</id>
+    <link href="http://www.jackfan.top/posts/43868/"/>
+    <id>http://www.jackfan.top/posts/43868/</id>
     <published>2018-05-07T15:07:45.000Z</published>
     <updated>2018-05-07T15:12:21.839Z</updated>
     
@@ -191,19 +217,19 @@
     
     </summary>
     
-      <category term="server" scheme="https://fanghuafan.github.io/categories/server/"/>
+      <category term="server" scheme="http://www.jackfan.top/categories/server/"/>
     
-      <category term="虚拟化" scheme="https://fanghuafan.github.io/categories/server/%E8%99%9A%E6%8B%9F%E5%8C%96/"/>
+      <category term="虚拟化" scheme="http://www.jackfan.top/categories/server/%E8%99%9A%E6%8B%9F%E5%8C%96/"/>
     
     
-      <category term="JKVM" scheme="https://fanghuafan.github.io/tags/JKVM/"/>
+      <category term="JKVM" scheme="http://www.jackfan.top/tags/JKVM/"/>
     
   </entry>
   
   <entry>
     <title>JAVA反射中，Class.forName和classloader的区别</title>
-    <link href="https://fanghuafan.github.io/posts/34422/"/>
-    <id>https://fanghuafan.github.io/posts/34422/</id>
+    <link href="http://www.jackfan.top/posts/34422/"/>
+    <id>http://www.jackfan.top/posts/34422/</id>
     <published>2018-05-06T15:08:49.000Z</published>
     <updated>2018-05-06T15:11:49.285Z</updated>
     
@@ -219,19 +245,19 @@
     
     </summary>
     
-      <category term="JAVA" scheme="https://fanghuafan.github.io/categories/JAVA/"/>
+      <category term="JAVA" scheme="http://www.jackfan.top/categories/JAVA/"/>
     
-      <category term="源码分析" scheme="https://fanghuafan.github.io/categories/JAVA/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
+      <category term="源码分析" scheme="http://www.jackfan.top/categories/JAVA/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
     
     
-      <category term="JAVA" scheme="https://fanghuafan.github.io/tags/JAVA/"/>
+      <category term="JAVA" scheme="http://www.jackfan.top/tags/JAVA/"/>
     
   </entry>
   
   <entry>
     <title>DELL R730xd服务器风扇问题解决</title>
-    <link href="https://fanghuafan.github.io/posts/53555/"/>
-    <id>https://fanghuafan.github.io/posts/53555/</id>
+    <link href="http://www.jackfan.top/posts/53555/"/>
+    <id>http://www.jackfan.top/posts/53555/</id>
     <published>2018-04-15T11:34:49.000Z</published>
     <updated>2018-05-06T15:01:02.396Z</updated>
     
@@ -249,17 +275,17 @@
     
     </summary>
     
-      <category term="server" scheme="https://fanghuafan.github.io/categories/server/"/>
+      <category term="server" scheme="http://www.jackfan.top/categories/server/"/>
     
     
-      <category term="server" scheme="https://fanghuafan.github.io/tags/server/"/>
+      <category term="server" scheme="http://www.jackfan.top/tags/server/"/>
     
   </entry>
   
   <entry>
     <title>Angular中请求Spring Boot接口缺少X-Application-Context报错</title>
-    <link href="https://fanghuafan.github.io/posts/23032/"/>
-    <id>https://fanghuafan.github.io/posts/23032/</id>
+    <link href="http://www.jackfan.top/posts/23032/"/>
+    <id>http://www.jackfan.top/posts/23032/</id>
     <published>2018-04-14T11:34:49.000Z</published>
     <updated>2018-04-14T15:04:17.697Z</updated>
     
@@ -275,17 +301,17 @@
     
     </summary>
     
-      <category term="Spring" scheme="https://fanghuafan.github.io/categories/Spring/"/>
+      <category term="Spring" scheme="http://www.jackfan.top/categories/Spring/"/>
     
     
-      <category term="Spring Boot" scheme="https://fanghuafan.github.io/tags/Spring-Boot/"/>
+      <category term="Spring Boot" scheme="http://www.jackfan.top/tags/Spring-Boot/"/>
     
   </entry>
   
   <entry>
     <title>httpclient SSL请求异常处理</title>
-    <link href="https://fanghuafan.github.io/posts/6932/"/>
-    <id>https://fanghuafan.github.io/posts/6932/</id>
+    <link href="http://www.jackfan.top/posts/6932/"/>
+    <id>http://www.jackfan.top/posts/6932/</id>
     <published>2018-04-13T15:28:23.000Z</published>
     <updated>2018-04-13T15:33:49.705Z</updated>
     
@@ -302,17 +328,17 @@
     
     </summary>
     
-      <category term="Spring" scheme="https://fanghuafan.github.io/categories/Spring/"/>
+      <category term="Spring" scheme="http://www.jackfan.top/categories/Spring/"/>
     
     
-      <category term="Spring MVC" scheme="https://fanghuafan.github.io/tags/Spring-MVC/"/>
+      <category term="Spring MVC" scheme="http://www.jackfan.top/tags/Spring-MVC/"/>
     
   </entry>
   
   <entry>
     <title>适配器模式</title>
-    <link href="https://fanghuafan.github.io/posts/39554/"/>
-    <id>https://fanghuafan.github.io/posts/39554/</id>
+    <link href="http://www.jackfan.top/posts/39554/"/>
+    <id>http://www.jackfan.top/posts/39554/</id>
     <published>2018-04-07T01:36:04.000Z</published>
     <updated>2018-04-07T03:23:40.300Z</updated>
     
@@ -329,17 +355,17 @@
     
     </summary>
     
-      <category term="设计模式" scheme="https://fanghuafan.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="http://www.jackfan.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
-      <category term="设计模式" scheme="https://fanghuafan.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="http://www.jackfan.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>原型模式</title>
-    <link href="https://fanghuafan.github.io/posts/22548/"/>
-    <id>https://fanghuafan.github.io/posts/22548/</id>
+    <link href="http://www.jackfan.top/posts/22548/"/>
+    <id>http://www.jackfan.top/posts/22548/</id>
     <published>2018-04-03T15:06:50.000Z</published>
     <updated>2018-04-03T15:32:47.038Z</updated>
     
@@ -355,17 +381,17 @@
     
     </summary>
     
-      <category term="设计模式" scheme="https://fanghuafan.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="http://www.jackfan.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
-      <category term="设计模式" scheme="https://fanghuafan.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="http://www.jackfan.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>leetcode-no5</title>
-    <link href="https://fanghuafan.github.io/posts/45091/"/>
-    <id>https://fanghuafan.github.io/posts/45091/</id>
+    <link href="http://www.jackfan.top/posts/45091/"/>
+    <id>http://www.jackfan.top/posts/45091/</id>
     <published>2018-04-03T14:38:59.000Z</published>
     <updated>2018-04-03T14:41:51.767Z</updated>
     
@@ -381,25 +407,25 @@
     
     </summary>
     
-      <category term="Algorithm" scheme="https://fanghuafan.github.io/categories/Algorithm/"/>
+      <category term="Algorithm" scheme="http://www.jackfan.top/categories/Algorithm/"/>
     
-      <category term="leetcode" scheme="https://fanghuafan.github.io/categories/Algorithm/leetcode/"/>
+      <category term="leetcode" scheme="http://www.jackfan.top/categories/Algorithm/leetcode/"/>
     
-      <category term="动态规划算法" scheme="https://fanghuafan.github.io/categories/Algorithm/leetcode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AE%97%E6%B3%95/"/>
+      <category term="动态规划算法" scheme="http://www.jackfan.top/categories/Algorithm/leetcode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="Algorithm" scheme="https://fanghuafan.github.io/tags/Algorithm/"/>
+      <category term="Algorithm" scheme="http://www.jackfan.top/tags/Algorithm/"/>
     
-      <category term="leetcode" scheme="https://fanghuafan.github.io/tags/leetcode/"/>
+      <category term="leetcode" scheme="http://www.jackfan.top/tags/leetcode/"/>
     
-      <category term="动态规划算法" scheme="https://fanghuafan.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AE%97%E6%B3%95/"/>
+      <category term="动态规划算法" scheme="http://www.jackfan.top/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>Xenserver删除VM存储无法释放</title>
-    <link href="https://fanghuafan.github.io/posts/16051/"/>
-    <id>https://fanghuafan.github.io/posts/16051/</id>
+    <link href="http://www.jackfan.top/posts/16051/"/>
+    <id>http://www.jackfan.top/posts/16051/</id>
     <published>2018-04-03T14:22:10.000Z</published>
     <updated>2018-04-03T14:31:07.660Z</updated>
     
@@ -415,17 +441,17 @@
     
     </summary>
     
-      <category term="xenserver" scheme="https://fanghuafan.github.io/categories/xenserver/"/>
+      <category term="xenserver" scheme="http://www.jackfan.top/categories/xenserver/"/>
     
     
-      <category term="云计算" scheme="https://fanghuafan.github.io/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
+      <category term="云计算" scheme="http://www.jackfan.top/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
     
   </entry>
   
   <entry>
     <title>建造者模式</title>
-    <link href="https://fanghuafan.github.io/posts/29711/"/>
-    <id>https://fanghuafan.github.io/posts/29711/</id>
+    <link href="http://www.jackfan.top/posts/29711/"/>
+    <id>http://www.jackfan.top/posts/29711/</id>
     <published>2018-04-02T13:10:43.000Z</published>
     <updated>2018-04-02T15:07:58.859Z</updated>
     
@@ -442,17 +468,17 @@
     
     </summary>
     
-      <category term="设计模式" scheme="https://fanghuafan.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="http://www.jackfan.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
-      <category term="设计模式" scheme="https://fanghuafan.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="http://www.jackfan.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>抽象工厂模式</title>
-    <link href="https://fanghuafan.github.io/posts/56455/"/>
-    <id>https://fanghuafan.github.io/posts/56455/</id>
+    <link href="http://www.jackfan.top/posts/56455/"/>
+    <id>http://www.jackfan.top/posts/56455/</id>
     <published>2018-04-02T12:22:58.000Z</published>
     <updated>2018-04-02T15:07:58.863Z</updated>
     
@@ -469,17 +495,17 @@
     
     </summary>
     
-      <category term="设计模式" scheme="https://fanghuafan.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="http://www.jackfan.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
-      <category term="设计模式" scheme="https://fanghuafan.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="http://www.jackfan.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>工厂模式</title>
-    <link href="https://fanghuafan.github.io/posts/6013/"/>
-    <id>https://fanghuafan.github.io/posts/6013/</id>
+    <link href="http://www.jackfan.top/posts/6013/"/>
+    <id>http://www.jackfan.top/posts/6013/</id>
     <published>2018-04-01T13:47:06.000Z</published>
     <updated>2018-04-02T23:31:22.183Z</updated>
     
@@ -496,17 +522,17 @@
     
     </summary>
     
-      <category term="设计模式" scheme="https://fanghuafan.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="http://www.jackfan.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
-      <category term="设计模式" scheme="https://fanghuafan.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="http://www.jackfan.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>单例模式</title>
-    <link href="https://fanghuafan.github.io/posts/60114/"/>
-    <id>https://fanghuafan.github.io/posts/60114/</id>
+    <link href="http://www.jackfan.top/posts/60114/"/>
+    <id>http://www.jackfan.top/posts/60114/</id>
     <published>2018-03-31T09:15:30.000Z</published>
     <updated>2018-03-31T14:06:50.545Z</updated>
     
@@ -523,38 +549,10 @@
     
     </summary>
     
-      <category term="设计模式" scheme="https://fanghuafan.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="http://www.jackfan.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
-      <category term="设计模式" scheme="https://fanghuafan.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Centos7.4 + Cloudstack4.11 + Xenserver7.2安装配置</title>
-    <link href="https://fanghuafan.github.io/posts/13794/"/>
-    <id>https://fanghuafan.github.io/posts/13794/</id>
-    <published>2018-03-30T15:53:20.000Z</published>
-    <updated>2018-04-07T03:31:56.602Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;最近折腾了一下Cloudstack4.11+Xenserver7,2的安装，刚开始使用的Xenserver7.4，最后翻看Cloudstack Supported Hypervisor
-        
-      
-    
-    </summary>
-    
-      <category term="云计算" scheme="https://fanghuafan.github.io/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
-    
-      <category term="cloudstack" scheme="https://fanghuafan.github.io/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/cloudstack/"/>
-    
-    
-      <category term="cloudstack" scheme="https://fanghuafan.github.io/tags/cloudstack/"/>
+      <category term="设计模式" scheme="http://www.jackfan.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
