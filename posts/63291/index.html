@@ -101,7 +101,9 @@
 <meta property="og:description" content="一、GitLab是什么？GitLab是由GitLab Inc.开发，使用MIT许可证的基于网络的Git仓库管理工具，且具有wiki和issue跟踪功能。 GitLab 是一个用于仓库管理系统的开源项目。 使用Git作为代码管理工具，并在此基础上搭建起来的web服务。Github是公共的git仓库，而Gitlab适合于搭建企业内部私有git仓库。 二、GitLiab架构如何？ 官网上将组件架构类比成">
 <meta property="og:locale" content="Chinese">
 <meta property="og:image" content="http://www.jackfan.top/images/git/gitlab/gitlab.png">
-<meta property="og:updated_time" content="2018-07-07T11:50:16.329Z">
+<meta property="og:image" content="http://www.jackfan.top/images/git/gitlab/gitlab-ci-0.png">
+<meta property="og:image" content="http://www.jackfan.top/images/git/gitlab/gitlab-ci.png">
+<meta property="og:updated_time" content="2018-07-09T00:09:46.533Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GitLab Architecture（架构）">
 <meta name="twitter:description" content="一、GitLab是什么？GitLab是由GitLab Inc.开发，使用MIT许可证的基于网络的Git仓库管理工具，且具有wiki和issue跟踪功能。 GitLab 是一个用于仓库管理系统的开源项目。 使用Git作为代码管理工具，并在此基础上搭建起来的web服务。Github是公共的git仓库，而Gitlab适合于搭建企业内部私有git仓库。 二、GitLiab架构如何？ 官网上将组件架构类比成">
@@ -367,8 +369,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-07-07T19:50:16+08:00">
-                2018-07-07
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-09T08:09:46+08:00">
+                2018-07-09
               </time>
             
           </span>
@@ -443,7 +445,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  620
+                  943
                 </span>
               
 
@@ -459,7 +461,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  4
                 </span>
               
             </div>
@@ -501,10 +503,22 @@
 </li>
 <li>GitLab-shell：GitLab-shell是第三种办公室员工，他使用一部传真机（SSH）代替前台（HTTP）传递命令，他通过Redis和Sidekiq进行通信，并直接或通过 TCP 间接访问 Unicorn；</li>
 <li>Gitaly：后台服务，专门负责访问磁盘以高效处理 git 操作，并缓存耗时操作。所有的 git 操作都通过 Gitaly 处理；</li>
-<li>GitLab-workhorse：反向代理服务器，可以处理与 Rails 无关的请求（磁盘上的 CSS、JS 文件等），处理 Git Push/Pull 请求，处理到 Rails 的连接（修改由 Rails 发送的响应或发送给 Rails 的请求，管理 Rails 的长期 WebSocket 连接等）</li>
+<li><p>GitLab-workhorse：反向代理服务器，可以处理与 Rails 无关的请求（磁盘上的 CSS、JS 文件等），处理 Git Push/Pull 请求，处理到 Rails 的连接（修改由 Rails 发送的响应或发送给 Rails 的请求，管理 Rails 的长期 WebSocket 连接等）</p>
+</li>
+<li><p>GitLab持续集成组件<br><img src="../../images/git/gitlab/gitlab-ci-0.png" alt=""><br><img src="../../images/git/gitlab/gitlab-ci.png" alt="">     </p>
+<ul>
+<li>GitLab-CI：GitLab-CI就是一套配合GitLab使用的持续集成系统（当然，还有其它的持续集成系统，同样可以配合GitLab使用，比如Jenkins）。而且GitLab8.0以后的版本是默认集成了GitLab-CI并且默认启用的。</li>
+<li>GitLab-Runner：GitLab-Runner是配合GitLab-CI进行使用的。一般地，GitLab里面的每一个工程都会定义一个属于这个工程的软件集成脚本，用来自动化地完成一些软件集成工作。当这个工程的仓库代码发生变动时，比如有人push了代码，GitLab就会将这个变动通知GitLab-CI。这时GitLab-CI会找出与这个工程相关联的Runner，并通知这些Runner把代码更新到本地并执行预定义好的执行脚本。</li>
+<li>GitLab-Runner可以分类两种类型：Shared Runner（共享型）和Specific Runner（指定型）：<ul>
+<li>Shared Runner：这种Runner（工人）是所有工程都能够用的。只有系统管理员能够创建Shared Runner。</li>
+<li>Specific Runner：这种Runner（工人）只能为指定的工程服务。拥有该工程访问权限的人都能够为该工程创建Shared Runner。</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <blockquote>
-<p>参考文献：<br><a href="https://docs.gitlab.com/ce/development/architecture.html" target="_blank" rel="noopener">https://docs.gitlab.com/ce/development/architecture.html</a><br><a href="https://blog.csdn.net/kikajack/article/details/80354774" target="_blank" rel="noopener">https://blog.csdn.net/kikajack/article/details/80354774</a><br><a href="https://www.tuicool.com/articles/bYbi2mJ" target="_blank" rel="noopener">https://www.tuicool.com/articles/bYbi2mJ</a> </p>
+<p>参考文献：<br><a href="https://docs.gitlab.com/ce/development/architecture.html" target="_blank" rel="noopener">https://docs.gitlab.com/ce/development/architecture.html</a><br><a href="https://blog.csdn.net/kikajack/article/details/80354774" target="_blank" rel="noopener">https://blog.csdn.net/kikajack/article/details/80354774</a><br><a href="https://www.tuicool.com/articles/bYbi2mJ" target="_blank" rel="noopener">https://www.tuicool.com/articles/bYbi2mJ</a><br><a href="https://docs.gitlab.com/ee/ci/README.html#doc-nav" target="_blank" rel="noopener">https://docs.gitlab.com/ee/ci/README.html#doc-nav</a><br><a href="https://www.cnblogs.com/cnundefined/p/7095368.html" target="_blank" rel="noopener">https://www.cnblogs.com/cnundefined/p/7095368.html</a><br><a href="https://docs.gitlab.com/runner/" target="_blank" rel="noopener">https://docs.gitlab.com/runner/</a>   </p>
 </blockquote>
 
       
@@ -814,7 +828,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">21.0k</span>
+    <span title="Site words total count">21.3k</span>
   
 </div>
 
