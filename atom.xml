@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.jackfan.top/"/>
-  <updated>2018-07-09T00:09:46.533Z</updated>
+  <updated>2018-07-18T15:56:15.589Z</updated>
   <id>http://www.jackfan.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Spring MVC &lt;context:component-scan&gt;去除不扫描</title>
+    <link href="http://www.jackfan.top/posts/37767/"/>
+    <id>http://www.jackfan.top/posts/37767/</id>
+    <published>2018-07-18T15:47:27.000Z</published>
+    <updated>2018-07-18T15:56:15.589Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Spring-MVC中去除不需扫描的类：&quot;&gt;&lt;a href=&quot;#Spring-MVC中去除不需扫描的类：&quot; class=&quot;headerlink&quot; title=&quot;Spring MVC中去除不需扫描的类：&quot;&gt;&lt;/a&gt;Spring
+        
+      
+    
+    </summary>
+    
+      <category term="spring" scheme="http://www.jackfan.top/categories/spring/"/>
+    
+    
+      <category term="java" scheme="http://www.jackfan.top/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>GitLab Architecture（架构）</title>
@@ -516,33 +542,6 @@
         
         
           &lt;p&gt;工厂模式（Factory Pattern）是创建型模式的一种，在创建对象时不会对客户端暴露创建逻辑，并且是通过使用一个共同的接口来指向新创建的对象。&lt;/p&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
-        
-      
-    
-    </summary>
-    
-      <category term="设计模式" scheme="http://www.jackfan.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    
-      <category term="设计模式" scheme="http://www.jackfan.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>单例模式</title>
-    <link href="http://www.jackfan.top/posts/60114/"/>
-    <id>http://www.jackfan.top/posts/60114/</id>
-    <published>2018-03-31T09:15:30.000Z</published>
-    <updated>2018-03-31T14:06:50.545Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;单例模式（Singleton Pattern）属于创建型模式，此模式涉及单一的类与对象，类负责创建自己的对象，同时保证只有一个对象被使用。&lt;/p&gt;
 &lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
         
       
