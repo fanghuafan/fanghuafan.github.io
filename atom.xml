@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.jackfan.top/"/>
-  <updated>2018-07-18T16:02:32.961Z</updated>
+  <updated>2018-07-18T16:13:10.373Z</updated>
   <id>http://www.jackfan.top/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一段导出gitlab工程的python脚本</title>
+    <link href="http://www.jackfan.top/posts/2883/"/>
+    <id>http://www.jackfan.top/posts/2883/</id>
+    <published>2018-07-18T16:09:43.000Z</published>
+    <updated>2018-07-18T16:13:10.373Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;安装python-gitlab&quot;&gt;&lt;a href=&quot;#安装python-gitlab&quot; class=&quot;headerlink&quot; title=&quot;安装python-gitlab&quot;&gt;&lt;/a&gt;安装python-gitlab&lt;/h3&gt;&lt;figure
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Spring MVC &lt;context:component-scan&gt;去除不扫描</title>
@@ -516,33 +538,6 @@
         
           &lt;p&gt;抽象工厂模式（Abstract Factory Pattern）是围绕一个超级工厂创建其他工厂。该超级工厂又称为其他工厂的工厂。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。&lt;/p&gt;
 &lt;figure class=&quot;highlight
-        
-      
-    
-    </summary>
-    
-      <category term="设计模式" scheme="http://www.jackfan.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    
-      <category term="设计模式" scheme="http://www.jackfan.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>工厂模式</title>
-    <link href="http://www.jackfan.top/posts/6013/"/>
-    <id>http://www.jackfan.top/posts/6013/</id>
-    <published>2018-04-01T13:47:06.000Z</published>
-    <updated>2018-04-02T23:31:22.183Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;工厂模式（Factory Pattern）是创建型模式的一种，在创建对象时不会对客户端暴露创建逻辑，并且是通过使用一个共同的接口来指向新创建的对象。&lt;/p&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
         
       
     

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[一段导出gitlab工程的python脚本]]></title>
+    <url>%2Fposts%2F2883%2F</url>
+    <content type="text"><![CDATA[安装python-gitlab1pip install python-gitlab 1234567891011121314151617181920212223242526272829303132#!/usr/bin/python# -*- coding: UTF-8 -*-import gitlabdef auth(): gl = gitlab.Gitlab('http://192.168.1.105', private_token='dfshgjkdfgcxvhjkdshfa') gl.auth() return gldef project_list(): gl = auth() projects = gl.projects.list(all=True) if(projects != None): for project in projects: download_project(gl, project)def download_project(gl, p): export = p.exports.create(&#123;&#125;) # Wait for the 'finished' status export.refresh() while export.export_status != 'finished': time.sleep(1) export.refresh() # Download the result with open('C://', 'wb') as f: export.download(streamed=True, action=f.write)project_list() 注意：GitLab版本至少10.6]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[Spring MVC 去除不扫描]]></title>
     <url>%2Fposts%2F37767%2F</url>
     <content type="text"><![CDATA[Spring MVC中去除不需扫描的类： 1234&lt;context:component-scan base-package="com.foo" use-default-filters="false"&gt; &lt;context:include-filter type="regex" expression="com.foo.bar.*Config"/&gt; &lt;context:include-filter type="regex" expression="com.foo.config.*"/&gt;&lt;/context:component-scan&gt;]]></content>
@@ -238,18 +243,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[cloudstack删除zone方法]]></title>
-    <url>%2Fposts%2F28333%2F</url>
-    <content type="text"><![CDATA[登录mysql或者mariadb1mysql -uroot -p123456 执行以下sql语句123use cloud; # 进入数据库select data_center_id from physical_network; # 查找所有的物理网络idupdate physical_network set removed=now() where data_center_id=1; # 更新已删除时间为当前时间 手动在zone中删除然后就可以在UI console中删除对应的资源域（zone）]]></content>
-      <categories>
-        <category>云计算</category>
-        <category>cloudstack</category>
-      </categories>
-      <tags>
-        <tag>cloudstack</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Centos7.4 + Cloudstack4.11 + Xenserver7.2安装配置]]></title>
     <url>%2Fposts%2F13794%2F</url>
     <content type="text"><![CDATA[最近折腾了一下Cloudstack4.11+Xenserver7,2的安装，刚开始使用的Xenserver7.4，最后翻看Cloudstack Supported Hypervisor Versions文档，发现对Xenserver最高只是支持到7.2，出现的问题是安装步骤什么都是正确的，系统VM也是可以正常启动，但是在Xencenter中进入命令行，使用ip a命令查看ip，l列出四个网卡，但是却没有正确分配ip，导致系统VM一直循环创建，无法正常启动，重启后发现status是Running但是代理状态永远都是没有Up，很是纠结郁闷，下面来记录下安装过程： 首先安装 cloudstack management安装之前最好先看下Xenserver和cloudstack各自的硬件要求。 配置hosts查看当前系统hostnamehostname --fqdn localhost 设置hostsvi /etc/hosts 在文件中添加： 182.168.0.111 cloudstack.cloud.priv # cloudstack management管理节点 192.168.0.112 xen1.cloud.priv # xenserver主机节点 查看是否可以ping通该hostping cloudstack.cloud.priv 到时候安装完主机节点也是同样的设置hosts，同时ping一下是否可以ping通 安装NTP时间同步yum install ntp 记得安装xenserver的时候，设置NTP同步节点的ip就是这个管理节点的ip 安装cloudstack management server【必须确保设备可以联网】配置yum安装源vim /etc/yum.repos.d/cloudstack.repo [cloudstack] name=cloudstack baseurl=http://cloudstack.apt-get.eu/centos/$releasever/4.11/ enabled=1 gpgcheck=0 执行安装命令yum install cloudstack-management 下载vhd-utilcd /usr/share/cloudstack-common/scripts/vm/hypervisor/xenserver wget http://download.cloud.com.s3.amazonaws.com/tools/vhd-util chmod 755 -R /usr/share/cloudstack-common/scripts/vm/hypervisor/xenserver 在管理节点上安装MariaDB或者MYSQL配置SELinuxrpm -qa | grep selinux # 查看selinux是否可用 vi /etc/selinux/config 将SELINUX=enforcing更改成SELINUX=permissive setenforce permissive # 配置立即生效 安装配置mariadb数据库yum install mariadb mariadb-server vi /etc/my.cnf [mysqld] innodb_rollback_on_timeout=1 innodb_lock_wait_timeout=600 max_connections=350 log-bin=mysql-bin binlog-format = &apos;ROW&apos; 启动数据库并设置为开机启动systemctl start mariadb ###启动数据库 systemctl enable mariadb ###开机自启动 初始化数据库mysql_secure_installation 设置密码然后一路yyyy （yes） 使用cloudstack-setup-databases初始化ClouStack数据库：后面如果安装配置失败，可以执行此命令重置数据库 cloudstack-setup-databases cloud:cloud@localhost --deploy-as=root:123456 -i 192.168.100.4 ### 192.168.100.4是当前系统的本地ip ### 重置数据库123456数据库密码 cloudstack安装tomcat服务器cloudstack-setup-management 安装NFS[网络文件系统]我的是在管理节点下面安装的NFS serveryum install nfs-utils # 有可能会无法下载，但是会自动重试 管理节点上创建主存储和二级存储的文件目录可以找一个容量空余比较硬盘创建，否则后面创建VM可能会报系统容量不足的异常 mkdir -p /export/primary mkdir -p /export/secondary 配置NFS文件目录导出vi /etc/exports 添加： /export/primary *(rw,async,no_root_squash,no_subtree_check) /export/secondary *(rw,async,no_root_squash,no_subtree_check) 导出目录exportfs -a 编辑配置nfs端口vi /etc/sysconfig/nfs 直接添加： LOCKD_TCPPORT=32803 LOCKD_UDPPORT=32769 MOUNTD_PORT=892 RQUOTAD_PORT=875 STATD_PORT=662 STATD_OUTGOING_PORT=2020 可以直接关闭防火墙（测试环境）或者在防火墙上开端口（点击查看配置）注意：centos7以上好像废弃了iptables，改用firewall，只需打开对应端口即可 如果客户机和服务器之间使用nfs v4通信，那么将域添加到管理程序主机和管理服务器上vi /etc/idmapd.conf 修改Domain = cloud.priv # 后缀名要一致 我的配置： 182.168.0.111 cloudstack.cloud.priv # cloudstack management管理节点 192.168.0.112 xen1.cloud.priv # xenserver主机节点 在安装好的主机节点上测试NFS挂载是否可以成功，这一步是在安装Xenserver主机后验证是否可以正常挂载，否则添加主存储和二级存储会出现问题mkdir /primary mount -t nfs &lt;management-server-name&gt;:/export/primary umount /primary mkdir /secondary mount -t nfs &lt;management-server-name&gt;:/export/secondary umount /secondary 下载安装系统VM魔板这个过程是比较慢的，可以使用迅雷或者其他加速加载工具下载模板到本地，然后再导入，注意下载的版本要对应，现在4.11的安装文档还是下载4.6的模板，如果下载4.6的模板，可能会出现问题，例如4.11的下载路径（http://cloudstack.apt-get.eu/systemvm/4.11/systemvm64template-4.11.0-xen.vhd.bz2） /usr/share/cloudstack-common/scripts/storage/secondary/cloud-install-sys-tmplt \ -m /mnt/secondary \ -u http://cloudstack.apt-get.eu/systemvm/4.11/systemvm64template-4.11.0-xen.vhd.bz2 \ -h xenserver \ -s &lt;optional-management-server-secret-key&gt; \ -F 然后安装Xenserver安装成功后进入命令行,配置XenServer dom0 Memoryvim /etc/xensource-inventory BUILD_NUMBER=&apos;39265p&apos; CURRENT_INTERFACES=&apos;xenbr0 xenbr1&apos; DOM0_MEM=&apos;752&apos; ----------------------------------------------------------修改成2940 PRODUCT_BRAND=&apos;XenServer&apos; INSTALLATION_UUID=&apos;68406e3e-eeac-4b15-9b30-0bd37d95473b&apos; KERNEL_VERSION=&apos;2.6.32.12-0.7.1.xs5.6.100.307.170586xen&apos; DEFAULT_SR_PHYSDEVS=&apos;/dev/sda3&apos; CONTROL_DOMAIN_UUID=&apos;69d22f7c-417b-4b84-af8f-4a7bea6fc83b&apos; PRIMARY_DISK=&apos;/dev/disk/by-id/scsi-366c92bf00002d66015e6a64b16a0aa2d&apos; XEN_VERSION=&apos;3.4.2&apos; BACKUP_PARTITION=&apos;/dev/disk/by-id/scsi-366c92bf00002d66015e6a64b16a0aa2d-part2&apos; PRODUCT_NAME=&apos;xenenterprise&apos; INSTALLATION_DATE=&apos;2011-05-23 12:29:49.057341&apos; PRODUCT_VERSION=&apos;5.6.100&apos; MANAGEMENT_INTERFACE=&apos;xenbr0&apos; 如果你安装的时候没有选择安装NTP，则现在你需要手动安装NTPyum install ntp # 安装ntp vi /etc/ntp.conf # 配置ntp,下面是配置内容 server 0.xenserver.pool.ntp.org server 1.xenserver.pool.ntp.org server 2.xenserver.pool.ntp.org server 3.xenserver.pool.ntp.org service ntpd restart # 启动ntp chkconfig ntpd on # 设置开机启动 如果后面要配置基本网络模式，应该将网络配置成网桥模式xe-switch-network-backend bridge # 执行该命令会提示重启xenserver 配置： vi /etc/sysctl.conf net.bridge.bridge-nf-call-iptables = 1 net.bridge.bridge-nf-call-ip6tables = 0 net.bridge.bridge-nf-call-arptables = 1 sysctl -p /etc/sysctl.conf XenServer物理网络安装先使用命令查看物理网络uuid: 1234567891011xe network-list xenserver有两块物理网卡, 上述命令会显示xenbr0和xenbr1的网络UUID, 假设 uuid ( RO) : 3489fa11-66ed-6a71-926b-5336d69c62babridge ( RO): xenbr0 uuid ( RO) : eb734bff-750b-ecac-32b6-9490179f9d33bridge ( RO): xenbr1则执行以下命令：# xe network-param-set name-label=mgtpub uuid=3489fa11-66ed-6a71-926b-5336d69c62ba# xe network-param-set name-label=guest uuid=eb734bff-750b-ecac-32b6-9490179f9d33 (全文完) 3/31/2018 12:57:35 PM]]></content>
@@ -262,14 +255,15 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Centos7查看版本号]]></title>
-    <url>%2Fposts%2F48293%2F</url>
-    <content type="text"><![CDATA[查看版本号1ll /etc/*centos* -rw-r–r–. 1 root root 38 8月 30 2017 /etc/centos-release-rw-r–r–. 1 root root 51 8月 30 2017 /etc/centos-release-upstream 查看CentOS的版本号1cat /etc/centos-release CentOS Linux release 7.4.1708 (Core) 查看内核版本1uname -r 3.10.0-327.el7.x86_64 查看操作系统位数1getconf LONG_BIT 64]]></content>
+    <title><![CDATA[cloudstack删除zone方法]]></title>
+    <url>%2Fposts%2F28333%2F</url>
+    <content type="text"><![CDATA[登录mysql或者mariadb1mysql -uroot -p123456 执行以下sql语句123use cloud; # 进入数据库select data_center_id from physical_network; # 查找所有的物理网络idupdate physical_network set removed=now() where data_center_id=1; # 更新已删除时间为当前时间 手动在zone中删除然后就可以在UI console中删除对应的资源域（zone）]]></content>
       <categories>
-        <category>Linux</category>
+        <category>云计算</category>
+        <category>cloudstack</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
+        <tag>cloudstack</tag>
       </tags>
   </entry>
   <entry>
@@ -281,6 +275,17 @@
       </categories>
       <tags>
         <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Centos7查看版本号]]></title>
+    <url>%2Fposts%2F48293%2F</url>
+    <content type="text"><![CDATA[查看版本号1ll /etc/*centos* -rw-r–r–. 1 root root 38 8月 30 2017 /etc/centos-release-rw-r–r–. 1 root root 51 8月 30 2017 /etc/centos-release-upstream 查看CentOS的版本号1cat /etc/centos-release CentOS Linux release 7.4.1708 (Core) 查看内核版本1uname -r 3.10.0-327.el7.x86_64 查看操作系统位数1getconf LONG_BIT 64]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
