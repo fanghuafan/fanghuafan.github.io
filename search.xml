@@ -4,6 +4,12 @@
     <title><![CDATA[一段导出gitlab工程的python脚本]]></title>
     <url>%2Fposts%2F2883%2F</url>
     <content type="text"><![CDATA[安装python-gitlab1pip install python-gitlab 1234567891011121314151617181920212223242526272829303132#!/usr/bin/python# -*- coding: UTF-8 -*-import gitlabdef auth(): gl = gitlab.Gitlab('http://192.168.1.105', private_token='dfshgjkdfgcxvhjkdshfa') gl.auth() return gldef project_list(): gl = auth() projects = gl.projects.list(all=True) if(projects != None): for project in projects: download_project(gl, project)def download_project(gl, p): export = p.exports.create(&#123;&#125;) # Wait for the 'finished' status export.refresh() while export.export_status != 'finished': time.sleep(1) export.refresh() # Download the result with open('C://', 'wb') as f: export.download(streamed=True, action=f.write)project_list() 注意：GitLab版本至少10.6]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Spring MVC 去除不扫描]]></title>
