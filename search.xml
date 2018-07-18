@@ -5,7 +5,7 @@
     <url>%2Fposts%2F37767%2F</url>
     <content type="text"><![CDATA[Spring MVC中去除不需扫描的类： 1234&lt;context:component-scan base-package="com.foo" use-default-filters="false"&gt; &lt;context:include-filter type="regex" expression="com.foo.bar.*Config"/&gt; &lt;context:include-filter type="regex" expression="com.foo.config.*"/&gt;&lt;/context:component-scan&gt;]]></content>
       <categories>
-        <category>spring</category>
+        <category>Spring</category>
       </categories>
       <tags>
         <tag>java</tag>
