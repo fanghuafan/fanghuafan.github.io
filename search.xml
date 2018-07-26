@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[DevOps学习]]></title>
+    <url>%2Fposts%2F25442%2F</url>
+    <content type="text"><![CDATA[前面在Jenkins学习的文章文章中已经简要介绍了DevOps相关概念。 DevOps理论：DevOps基于精益、约束理论、丰田生产系统、柔性工程、学习型组织、安全文化、人员优化等知识体系，并参考了高信任度文化、服务型领导、组织变化管理等方法论，把所有这些最可信的原则综合地运用于IT系统价值流中，就可以产生出这样的成果。 精益二原则： 1、坚持前置时间是提升质量、客户满意度和员工幸福感的最佳度量指标之一； 2、小批量任务交付是缩短前置时间的一个关键因素。 敏捷原则：频繁交付可工作的软件，推荐尽可能缩短交付周期，强调使用小批量任务进行增量发布，建立自组织的小团队，让成员在高度信任的环境中愉悦的工作。 持续交付持续交付基于持续构建、测试和集成的开发原则，部署流水线确保代码和基础设置都是可部署状态，所提交到主干的代码都是可以安全的部署到生产环境的。 DevOps的基础原则DevOps的基础原则是三步工作法： 1、流动原则（从左到右的工作流） 2、反馈原则（从右到左的快速、持续的反馈） 3、持续学习与实验原则（建立持续学习与实验的文化） 第一工作法，从开发到IT运维再到客户的整个自左向右的工作流。通过建立完整的持续构建、集成以及部署和严控半成品，帮助我们形成一条迅速、可预测、持续不断的计划内工作流、从而向业务部门交付工作价值，同时尽可能降低计划外工作的影响和破坏，逐步提供稳定的、可预期的、安全的IT服务。 第二工作法，价值流各阶段自右向左的快速持续反馈流，放大其效益以防止问题再次发生，或者更快地发现和修复问题。加速问题的反馈，可以缩短及放大反馈环路，在源头上解决问题，避免问题逐步放大。一旦问题反馈不及时，后续基于此产品的工作，只会让错误成倍的放大。此外，合理的反馈流可以减少意外工作的干扰。 第三工作法，关于创造公司文化，该文化可带动两种风气的形成。当成功的构建了第一和第二工作法，下来就是需要增强产品信心，营造一种勇于创新、冒险的环境，高信任度的文化。这就要不断给系统施加压力，不断强化学习并加以改进，比如反复的故障演练、反复的安装部署等。 草考文献：《DevOps实践指南》《DevOps软件架构师行动指南》]]></content>
+      <categories>
+        <category>DevOps</category>
+      </categories>
+      <tags>
+        <tag>DevOps</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[一段导出gitlab工程的python脚本]]></title>
     <url>%2Fposts%2F2883%2F</url>
     <content type="text"><![CDATA[安装python-gitlab1pip install python-gitlab 1234567891011121314151617181920212223242526272829303132#!/usr/bin/python# -*- coding: UTF-8 -*-import gitlabdef auth(): gl = gitlab.Gitlab('http://192.168.1.105', private_token='dfshgjkdfgcxvhjkdshfa') gl.auth() return gldef project_list(): gl = auth() projects = gl.projects.list(all=True) if(projects != None): for project in projects: download_project(gl, project)def download_project(gl, p): export = p.exports.create(&#123;&#125;) # Wait for the 'finished' status export.refresh() while export.export_status != 'finished': time.sleep(1) export.refresh() # Download the result with open('C://', 'wb') as f: export.download(streamed=True, action=f.write)project_list() 注意：GitLab版本至少10.6]]></content>
@@ -273,17 +284,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[享元模式]]></title>
-    <url>%2Fposts%2F65163%2F</url>
-    <content type="text"><![CDATA[享元模式（Flyweight Pattern）是结构型模式中的一种，主要用于减少创建对象的数量，以减少内存占用和提高性能。它减少对象数量，从而改善应用所需的对象结构的方式。其中最经典的应用就是JDK中String的实现，相同变量值的String都会放入同一个地址，然后这些变量指向这些地址，当有变量值变化时，变量的引用会重新查找指向地址，如果没有相同变量值得地址，则复制到新的地址。同样的，享元模式就是是使用这一种模式，减少创建相同对象数量从而使内存开销更小。 使用场景： 1、系统有大量相似对象。 2、需要缓冲池的场景。 /* * Copyright,ShanNong Inc,2018 and onwards * * Author:fanghua fan */ package com.fanghua.designpattrn.flyweightpattern; import java.util.HashMap; import java.util.Map; /** * 数学抽象类 */ public interface Math { String study(); String happy(String name); } /** * 创建数学下几何学对象 */ class Geometry implements Math { String chapters; public Geometry(String chapters) { this.chapters = chapters; } public String study() { System.out.println("Good content!" + chapters); return "Good content!" + chapters; } public String happy(String name) { return name + " happy to learn " + chapters; } } /** * 创建一个几何学学习工厂 */ class MathStudyFactory { private static final Map&lt;String, Math&gt; shareObject = new HashMap&lt;String, Math&gt;(); /** * 获取学习内容 * * @param chapters * @return */ public static Math getMathContent(String chapters) { Math findRes = shareObject.get(chapters); // 判断共享池中是否存在此章节 if (findRes == null) { findRes = new Geometry(chapters); shareObject.put(chapters, findRes); } return findRes; } } /** * 数学家们学习数学 */ class MathematicianStory { static String[] chapters = {"平面几何", "立体几何", "解析几何"}; public static void main(String[] args) { // 100万个数学家学习 for (int i = 0; i &lt; 100; i++) { Math resObject = MathStudyFactory.getMathContent(getRandomChapter()); resObject.study(); String happyDone = resObject.happy(java.lang.Math.random() + ""); System.out.println("Done: " + happyDone); } } private static String getRandomChapter() { return chapters[(int) (java.lang.Math.random() * chapters.length)]; } } (全文完)3/30/2018 11:43:29 PM]]></content>
-      <categories>
-        <category>设计模式</category>
-      </categories>
-      <tags>
-        <tag>设计模式</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Centos7查看版本号]]></title>
     <url>%2Fposts%2F48293%2F</url>
     <content type="text"><![CDATA[查看版本号1ll /etc/*centos* -rw-r–r–. 1 root root 38 8月 30 2017 /etc/centos-release-rw-r–r–. 1 root root 51 8月 30 2017 /etc/centos-release-upstream 查看CentOS的版本号1cat /etc/centos-release CentOS Linux release 7.4.1708 (Core) 查看内核版本1uname -r 3.10.0-327.el7.x86_64 查看操作系统位数1getconf LONG_BIT 64]]></content>
@@ -292,6 +292,17 @@
       </categories>
       <tags>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[享元模式]]></title>
+    <url>%2Fposts%2F65163%2F</url>
+    <content type="text"><![CDATA[享元模式（Flyweight Pattern）是结构型模式中的一种，主要用于减少创建对象的数量，以减少内存占用和提高性能。它减少对象数量，从而改善应用所需的对象结构的方式。其中最经典的应用就是JDK中String的实现，相同变量值的String都会放入同一个地址，然后这些变量指向这些地址，当有变量值变化时，变量的引用会重新查找指向地址，如果没有相同变量值得地址，则复制到新的地址。同样的，享元模式就是是使用这一种模式，减少创建相同对象数量从而使内存开销更小。 使用场景： 1、系统有大量相似对象。 2、需要缓冲池的场景。 /* * Copyright,ShanNong Inc,2018 and onwards * * Author:fanghua fan */ package com.fanghua.designpattrn.flyweightpattern; import java.util.HashMap; import java.util.Map; /** * 数学抽象类 */ public interface Math { String study(); String happy(String name); } /** * 创建数学下几何学对象 */ class Geometry implements Math { String chapters; public Geometry(String chapters) { this.chapters = chapters; } public String study() { System.out.println("Good content!" + chapters); return "Good content!" + chapters; } public String happy(String name) { return name + " happy to learn " + chapters; } } /** * 创建一个几何学学习工厂 */ class MathStudyFactory { private static final Map&lt;String, Math&gt; shareObject = new HashMap&lt;String, Math&gt;(); /** * 获取学习内容 * * @param chapters * @return */ public static Math getMathContent(String chapters) { Math findRes = shareObject.get(chapters); // 判断共享池中是否存在此章节 if (findRes == null) { findRes = new Geometry(chapters); shareObject.put(chapters, findRes); } return findRes; } } /** * 数学家们学习数学 */ class MathematicianStory { static String[] chapters = {"平面几何", "立体几何", "解析几何"}; public static void main(String[] args) { // 100万个数学家学习 for (int i = 0; i &lt; 100; i++) { Math resObject = MathStudyFactory.getMathContent(getRandomChapter()); resObject.study(); String happyDone = resObject.happy(java.lang.Math.random() + ""); System.out.println("Done: " + happyDone); } } private static String getRandomChapter() { return chapters[(int) (java.lang.Math.random() * chapters.length)]; } } (全文完)3/30/2018 11:43:29 PM]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
       </tags>
   </entry>
   <entry>
