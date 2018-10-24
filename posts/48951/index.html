@@ -79,7 +79,7 @@
 
 
 
-  <meta name="keywords" content="JAVA," />
+  <meta name="keywords" content="MySQL," />
 
 
 
@@ -92,18 +92,18 @@
 
 
 
-<meta name="description" content="JAVA中class.forName()和classLoader都可用来对类进行加载： class.forName()前者除了将类的.class文件加载到jvm中之外，还会对类进行解释，执行类中的static块。而classLoader只干一件事情，就是将.class文件加载到jvm中，不会执行static中的内容,只有在newInstance才会去执行static块。   Class.forNa">
-<meta name="keywords" content="JAVA">
+<meta name="description" content="索引的本质索引是帮助MySQL高效获取数据的数据结构。即可以理解为：索引是数据结构。目前大部分数据库系统及文件系统都采用B-Tree和B+Tree作为索引结构。 从数据结构角度1. B-Tree索引最常见的索引类型，基于B-Tree数据结构。B-Tree的基本思想是，所有值（被索引的列）都是排过序的，每个叶节点到跟节点距离相等。所以B-Tree适合用来查找某一范围内的数据，而且可以直接支持数据排序">
+<meta name="keywords" content="MySQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JAVA反射中，Class.forName和classloader的区别">
-<meta property="og:url" content="http://www.jackfan.top/posts/34422/index.html">
+<meta property="og:title" content="MySQL索引类型">
+<meta property="og:url" content="http://www.jackfan.top/posts/48951/index.html">
 <meta property="og:site_name" content="华仔の博客">
-<meta property="og:description" content="JAVA中class.forName()和classLoader都可用来对类进行加载： class.forName()前者除了将类的.class文件加载到jvm中之外，还会对类进行解释，执行类中的static块。而classLoader只干一件事情，就是将.class文件加载到jvm中，不会执行static中的内容,只有在newInstance才会去执行static块。   Class.forNa">
+<meta property="og:description" content="索引的本质索引是帮助MySQL高效获取数据的数据结构。即可以理解为：索引是数据结构。目前大部分数据库系统及文件系统都采用B-Tree和B+Tree作为索引结构。 从数据结构角度1. B-Tree索引最常见的索引类型，基于B-Tree数据结构。B-Tree的基本思想是，所有值（被索引的列）都是排过序的，每个叶节点到跟节点距离相等。所以B-Tree适合用来查找某一范围内的数据，而且可以直接支持数据排序">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2018-05-06T15:11:49.285Z">
+<meta property="og:updated_time" content="2018-10-24T23:38:52.591Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JAVA反射中，Class.forName和classloader的区别">
-<meta name="twitter:description" content="JAVA中class.forName()和classLoader都可用来对类进行加载： class.forName()前者除了将类的.class文件加载到jvm中之外，还会对类进行解释，执行类中的static块。而classLoader只干一件事情，就是将.class文件加载到jvm中，不会执行static中的内容,只有在newInstance才会去执行static块。   Class.forNa">
+<meta name="twitter:title" content="MySQL索引类型">
+<meta name="twitter:description" content="索引的本质索引是帮助MySQL高效获取数据的数据结构。即可以理解为：索引是数据结构。目前大部分数据库系统及文件系统都采用B-Tree和B+Tree作为索引结构。 从数据结构角度1. B-Tree索引最常见的索引类型，基于B-Tree数据结构。B-Tree的基本思想是，所有值（被索引的列）都是排过序的，每个叶节点到跟节点距离相等。所以B-Tree适合用来查找某一范围内的数据，而且可以直接支持数据排序">
 
 
 
@@ -133,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://www.jackfan.top/posts/34422/"/>
+  <link rel="canonical" href="http://www.jackfan.top/posts/48951/"/>
 
 
 
 
 
-  <title>JAVA反射中，Class.forName和classloader的区别 | 华仔の博客</title>
+  <title>MySQL索引类型 | 华仔の博客</title>
   
 
 
@@ -320,7 +320,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.jackfan.top/posts/34422/">
+    <link itemprop="mainEntityOfPage" href="http://www.jackfan.top/posts/48951/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="华仔">
@@ -337,7 +337,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">JAVA反射中，Class.forName和classloader的区别</h2>
+          <h2 class="post-title" itemprop="name headline">MySQL索引类型</h2>
         
 
         <div class="post-meta">
@@ -349,8 +349,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-06T23:08:49+08:00">
-                2018-05-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-01T00:16:28+08:00">
+                2018-10-01
               </time>
             
 
@@ -365,8 +365,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-05-06T23:11:49+08:00">
-                2018-05-06
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-25T07:38:52+08:00">
+                2018-10-25
               </time>
             
           </span>
@@ -384,19 +384,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JAVA/" itemprop="url" rel="index">
-                    <span itemprop="name">JAVA</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JAVA/源码分析/" itemprop="url" rel="index">
-                    <span itemprop="name">源码分析</span>
+                  <a href="/categories/索引/" itemprop="url" rel="index">
+                    <span itemprop="name">索引</span>
                   </a>
                 </span>
 
@@ -413,8 +402,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/posts/34422/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/posts/34422/" itemprop="commentsCount"></span>
+                <a href="/posts/48951/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/posts/48951/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -422,7 +411,7 @@
 
           
           
-             <span id="/posts/34422/" class="leancloud_visitors" data-flag-title="JAVA反射中，Class.forName和classloader的区别">
+             <span id="/posts/48951/" class="leancloud_visitors" data-flag-title="MySQL索引类型">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -452,7 +441,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  128
+                  1,236
                 </span>
               
 
@@ -468,7 +457,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  5
                 </span>
               
             </div>
@@ -489,10 +478,38 @@
       
 
       
-        <h4 id="JAVA中class-forName-和classLoader都可用来对类进行加载："><a href="#JAVA中class-forName-和classLoader都可用来对类进行加载：" class="headerlink" title="JAVA中class.forName()和classLoader都可用来对类进行加载："></a>JAVA中class.forName()和classLoader都可用来对类进行加载：</h4><ul>
-<li>class.forName()前者除了将类的.class文件加载到jvm中之外，还会对类进行解释，执行类中的static块。<br>而classLoader只干一件事情，就是将.class文件加载到jvm中，不会执行static中的内容,只有在newInstance才会去执行static块。  </li>
-<li>Class.forName(name, initialize, loader)带参函数也可控制是否加载static块。并且只有调用了newInstance()方法采用调用构造函数，创建类的对象</li>
+        <h2 id="索引的本质"><a href="#索引的本质" class="headerlink" title="索引的本质"></a>索引的本质</h2><p>索引是帮助MySQL高效获取数据的数据结构。即可以理解为：索引是数据结构。目前大部分数据库系统及文件系统都采用B-Tree和B+Tree作为索引结构。</p>
+<h2 id="从数据结构角度"><a href="#从数据结构角度" class="headerlink" title="从数据结构角度"></a>从数据结构角度</h2><h3 id="1-B-Tree索引"><a href="#1-B-Tree索引" class="headerlink" title="1. B-Tree索引"></a>1. B-Tree索引</h3><p>最常见的索引类型，基于B-Tree数据结构。B-Tree的基本思想是，所有值（被索引的列）都是排过序的，每个叶节点到跟节点距离相等。所以B-Tree适合用来查找某一范围内的数据，而且可以直接支持数据排序（ORDER BY）。但是当索引多列时，列的顺序特别重要，需要格外注意。InnoDB和MyISAM都支持B-Tree索引。InnoDB用的是一个变种B+Tree，而MyISAM为了节省空间对索引进行了压缩，从而牺牲了性能。</p>
+<h3 id="2-Hash索引"><a href="#2-Hash索引" class="headerlink" title="2. Hash索引"></a>2. Hash索引</h3><p>基于hash表。所以这种索引只支持精确查找，不支持范围查找，不支持排序。这意味着范围查找或ORDER BY都要依赖server层的额外工作。目前只有Memory引擎支持显式的hash索引（但是它的hash是nonunique的，冲突太多时也会影响查找性能）。Memory引擎默认的索引类型即是Hash索引，虽然它也支持B-Tree索引。</p>
+<p>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE testhash (</span><br><span class="line">    fname VARCHAR(50) NOT NULL,</span><br><span class="line">    lname VARCHAR(50) NOT NULL,</span><br><span class="line">    KEY USING HASH(fname)</span><br><span class="line">) ENGINE =MEMORY;</span><br></pre></td></tr></table></figure></p>
+<p>由于hash索引可以一次定位，不需要像树形索引那样逐层查找,因此具有极高的效率。但是 Hash 索引本身由于其特殊性也带来了很多限制和弊端，主要有以下这些:             </p>
+<ul>
+<li>Hash 索引仅仅能满足”=”,”IN”和”&lt;=&gt;”查询，不能使用范围查询。            </li>
+<li>Hash 索引无法被用来避免数据的排序操作。            </li>
+<li>Hash 索引不能利用部分索引键查询。              </li>
+<li>Hash 索引在任何时候都不能避免表扫描。                 </li>
+<li>Hash 索引遇到大量Hash值相等的情况后性能并不一定就会比B-Tree索引高。                 </li>
 </ul>
+<h3 id="3-Spatial-R-Tree-（空间）索引"><a href="#3-Spatial-R-Tree-（空间）索引" class="headerlink" title="3. Spatial (R-Tree)（空间）索引"></a>3. Spatial (R-Tree)（空间）索引</h3><p>只有MyISAM引擎支持，并且支持的不好。可以忽略。</p>
+<h3 id="4-Full-text索引"><a href="#4-Full-text索引" class="headerlink" title="4. Full-text索引"></a>4. Full-text索引</h3><p>主要用来查找文本中的关键字，而不是直接与索引中的值相比较。Full-text索引跟其它索引大不相同，它更像是一个搜索引擎，而不是简单的WHERE语句的参数匹配。你可以对某列分别进行full-text索引和B-Tree索引，两者互不冲突。Full-text索引配合MATCH AGAINST操作使用，而不是一般的WHERE语句加LIKE。</p>
+<h2 id="从物理存储角度"><a href="#从物理存储角度" class="headerlink" title="从物理存储角度"></a>从物理存储角度</h2><p>1、聚集索引（clustered index）</p>
+<p>2、非聚集索引（non-clustered index）</p>
+<h2 id="从逻辑角度"><a href="#从逻辑角度" class="headerlink" title="从逻辑角度"></a>从逻辑角度</h2><p>1、主键索引：主键索引是一种特殊的唯一索引，不允许有空值</p>
+<p>2、普通索引或者单列索引</p>
+<p>3、多列索引（复合索引）：复合索引指多个字段上创建的索引，只有在查询条件中使用了创建索引时的第一个字段，索引才会被使用。使用复合索引时遵循最左前缀集合</p>
+<p>4、唯一索引或者非唯一索引</p>
+<p>5、空间索引：空间索引是对空间数据类型的字段建立的索引，MYSQL中的空间数据类型有4种，分别是GEOMETRY、POINT、LINESTRING、POLYGON。<br>MYSQL使用SPATIAL关键字进行扩展，使得能够用于创建正规索引类型的语法创建空间索引。创建空间索引的列，必须将其声明为NOT NULL，空间索引只能在存储引擎为MYISAM的表中创建</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE table_name[col_name data type]</span><br><span class="line">[unique|fulltext|spatial][index|key][index_name](col_name[length])[asc|desc]</span><br><span class="line">`</span><br></pre></td></tr></table></figure>
+<ul>
+<li>1、unique|fulltext|spatial为可选参数，分别表示唯一索引、全文索引和空间索引；</li>
+<li>2、index和key为同义词，两者作用相同，用来指定创建索引</li>
+<li>3、col_name为需要创建索引的字段列，该列必须从数据表中该定义的多个列中选择；</li>
+<li>4、index_name指定索引的名称，为可选参数，如果不指定，MYSQL默认col_name为索引值；</li>
+<li>5、length为可选参数，表示索引的长度，只有字符串类型的字段才能指定索引长度；</li>
+<li>6、asc或desc指定升序或降序的索引值存储</li>
+</ul>
+<h2 id="可能会引起索引失效的操作"><a href="#可能会引起索引失效的操作" class="headerlink" title="可能会引起索引失效的操作"></a>可能会引起索引失效的操作</h2><p>1、 如果是varchar类型没有加<code></code> 符号还是会进行全表扫描<br>2、 sql语句上尽可能不要用like，在索引字段上使用like还是会进行全表扫描<br>3、 使用is null 或 is not null<br>4、 使用函数作为where查询的条件<br>5、 使用不等于操作符（&lt;&gt; ,!=,not in,in）           </p>
+<h2 id="添加索引应注意"><a href="#添加索引应注意" class="headerlink" title="添加索引应注意"></a>添加索引应注意</h2><p>1、如果是频繁更新的字段建了索引，更新字段的同时需要额外去更新索引<br>2、索引会占用比较大的磁盘空间去存储             </p>
 
       
     </div>
@@ -513,7 +530,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://www.jackfan.top/posts/34422/" title="JAVA反射中，Class.forName和classloader的区别">http://www.jackfan.top/posts/34422/</a>
+    <a href="http://www.jackfan.top/posts/48951/" title="MySQL索引类型">http://www.jackfan.top/posts/48951/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -528,7 +545,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JAVA/" rel="tag"># JAVA</a>
+            <a href="/tags/MySQL/" rel="tag"># MySQL</a>
           
         </div>
       
@@ -556,8 +573,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/53555/" rel="next" title="DELL R730xd服务器风扇问题解决">
-                <i class="fa fa-chevron-left"></i> DELL R730xd服务器风扇问题解决
+              <a href="/posts/37840/" rel="next" title="Go项目不同系统下的可执行文件">
+                <i class="fa fa-chevron-left"></i> Go项目不同系统下的可执行文件
               </a>
             
           </div>
@@ -565,10 +582,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/posts/43868/" rel="prev" title="KVM+SPICE安装配置文档">
-                KVM+SPICE安装配置文档 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -764,7 +777,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#JAVA中class-forName-和classLoader都可用来对类进行加载："><span class="nav-number">1.</span> <span class="nav-text">JAVA中class.forName()和classLoader都可用来对类进行加载：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#索引的本质"><span class="nav-number">1.</span> <span class="nav-text">索引的本质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从数据结构角度"><span class="nav-number">2.</span> <span class="nav-text">从数据结构角度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-B-Tree索引"><span class="nav-number">2.1.</span> <span class="nav-text">1. B-Tree索引</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Hash索引"><span class="nav-number">2.2.</span> <span class="nav-text">2. Hash索引</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Spatial-R-Tree-（空间）索引"><span class="nav-number">2.3.</span> <span class="nav-text">3. Spatial (R-Tree)（空间）索引</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Full-text索引"><span class="nav-number">2.4.</span> <span class="nav-text">4. Full-text索引</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从物理存储角度"><span class="nav-number">3.</span> <span class="nav-text">从物理存储角度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从逻辑角度"><span class="nav-number">4.</span> <span class="nav-text">从逻辑角度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可能会引起索引失效的操作"><span class="nav-number">5.</span> <span class="nav-text">可能会引起索引失效的操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加索引应注意"><span class="nav-number">6.</span> <span class="nav-text">添加索引应注意</span></a></li></ol></div>
             
 
           </div>

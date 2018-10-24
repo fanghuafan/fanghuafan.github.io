@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.jackfan.top/"/>
-  <updated>2018-10-24T14:33:27.261Z</updated>
+  <updated>2018-10-24T23:38:52.591Z</updated>
   <id>http://www.jackfan.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MySQL索引类型</title>
+    <link href="http://www.jackfan.top/posts/48951/"/>
+    <id>http://www.jackfan.top/posts/48951/</id>
+    <published>2018-09-30T16:16:28.000Z</published>
+    <updated>2018-10-24T23:38:52.591Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;索引的本质&quot;&gt;&lt;a href=&quot;#索引的本质&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="索引" scheme="http://www.jackfan.top/categories/%E7%B4%A2%E5%BC%95/"/>
+    
+    
+      <category term="MySQL" scheme="http://www.jackfan.top/tags/MySQL/"/>
+    
+  </entry>
   
   <entry>
     <title>Go项目不同系统下的可执行文件</title>
@@ -523,33 +549,6 @@
     
     
       <category term="Spring Boot" scheme="http://www.jackfan.top/tags/Spring-Boot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>httpclient SSL请求异常处理</title>
-    <link href="http://www.jackfan.top/posts/6932/"/>
-    <id>http://www.jackfan.top/posts/6932/</id>
-    <published>2018-04-13T15:28:23.000Z</published>
-    <updated>2018-04-13T15:33:49.705Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;今天突然发现请求微信小程序获取OpenID的接口报错，看了一下日志，找了好久发现是SSl版本的原因，之前没有问题，今天重启了一次就出现这个问题。&lt;/p&gt;
-&lt;pre&gt;&lt;code
-        
-      
-    
-    </summary>
-    
-      <category term="Spring" scheme="http://www.jackfan.top/categories/Spring/"/>
-    
-    
-      <category term="Spring MVC" scheme="http://www.jackfan.top/tags/Spring-MVC/"/>
     
   </entry>
   
