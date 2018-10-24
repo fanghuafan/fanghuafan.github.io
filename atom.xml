@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.jackfan.top/"/>
-  <updated>2018-10-24T14:09:26.661Z</updated>
+  <updated>2018-10-24T14:29:34.949Z</updated>
   <id>http://www.jackfan.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Go项目不同系统下的可执行文件</title>
+    <link href="http://www.jackfan.top/posts/37840/"/>
+    <id>http://www.jackfan.top/posts/37840/</id>
+    <published>2018-09-26T14:25:01.000Z</published>
+    <updated>2018-10-24T14:29:34.949Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Golang 支持在一个平台下生成另一个平台可执行程序的交叉编译功能。&lt;/p&gt;
+&lt;h4 id=&quot;1、Mac下编译Linux-Windows平台的64位可执行程序：&quot;&gt;&lt;a href=&quot;#1、Mac下编译Linux-Windows平台的64位可执行程序：&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="go build" scheme="http://www.jackfan.top/categories/go-build/"/>
+    
+    
+      <category term="Golang" scheme="http://www.jackfan.top/tags/Golang/"/>
+    
+  </entry>
   
   <entry>
     <title>Dubbo分布式调用链日志追踪</title>
@@ -523,33 +550,6 @@
     
     
       <category term="Spring MVC" scheme="http://www.jackfan.top/tags/Spring-MVC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>适配器模式</title>
-    <link href="http://www.jackfan.top/posts/39554/"/>
-    <id>http://www.jackfan.top/posts/39554/</id>
-    <published>2018-04-07T01:36:04.000Z</published>
-    <updated>2018-04-07T03:23:40.300Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;适配器模式（Adapter Pattern）是一种结构模式，主要是实现类、对象、接口的兼容性，&lt;/p&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
-        
-      
-    
-    </summary>
-    
-      <category term="设计模式" scheme="http://www.jackfan.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    
-      <category term="设计模式" scheme="http://www.jackfan.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
