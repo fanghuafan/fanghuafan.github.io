@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.jackfan.top/"/>
-  <updated>2018-08-23T00:01:40.728Z</updated>
+  <updated>2018-10-24T14:09:26.661Z</updated>
   <id>http://www.jackfan.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Dubbo分布式调用链日志追踪</title>
+    <link href="http://www.jackfan.top/posts/16401/"/>
+    <id>http://www.jackfan.top/posts/16401/</id>
+    <published>2018-09-24T13:08:28.000Z</published>
+    <updated>2018-10-24T14:09:26.661Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h5 id=&quot;为了在分布式系统快速定位问题及进行性能问题定位，我们需要知道引起性能问题的具体操作，然而在分布式系统中，一个请求往往会调用很多的服务（service），如何快速的定位，这个时候我们就需要分布式链路跟踪系统，如ZipKin，它会帮助我们快速定位问题根源。&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Dubbo" scheme="http://www.jackfan.top/categories/Dubbo/"/>
+    
+    
+      <category term="Dubbo" scheme="http://www.jackfan.top/tags/Dubbo/"/>
+    
+  </entry>
   
   <entry>
     <title>如何正确的比较两个文件是否相同</title>
@@ -515,32 +541,6 @@
         
           &lt;p&gt;适配器模式（Adapter Pattern）是一种结构模式，主要是实现类、对象、接口的兼容性，&lt;/p&gt;
 &lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
-        
-      
-    
-    </summary>
-    
-      <category term="设计模式" scheme="http://www.jackfan.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    
-      <category term="设计模式" scheme="http://www.jackfan.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>原型模式</title>
-    <link href="http://www.jackfan.top/posts/22548/"/>
-    <id>http://www.jackfan.top/posts/22548/</id>
-    <published>2018-04-03T15:06:50.000Z</published>
-    <updated>2018-04-03T15:32:47.038Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;原型模式（Prototype Pattern）是用于创建重复的对象，同时又能保证性能。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。
         
       
     
