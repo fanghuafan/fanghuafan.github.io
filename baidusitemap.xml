@@ -4,19 +4,39 @@
 
     
   <url>
+    <loc>http://www.jackfan.top/posts/43376/</loc>
+    <lastmod>2018-10-25T00:10:58.154Z</lastmod>
+    <data>
+        <display>
+        <title>桥接模式</title>
+        <pubTime>2018-09-30T23:51:43.000Z</pubTime>
+        
+        <tag>设计模式</tag>
+         
+         
+           
+             
+              <breadCrumb title="设计模式" url="http://www.jackfan.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.jackfan.top/posts/48951/</loc>
-    <lastmod>2018-10-24T23:38:52.591Z</lastmod>
+    <lastmod>2018-10-24T23:52:39.082Z</lastmod>
     <data>
         <display>
         <title>MySQL索引类型</title>
         <pubTime>2018-09-30T16:16:28.000Z</pubTime>
         
-        <tag>MySQL</tag>
+        <tag>索引</tag>
          
          
            
              
-              <breadCrumb title="索引" url="http://www.jackfan.top/categories/%E7%B4%A2%E5%BC%95/"/>
+              <breadCrumb title="MySQL" url="http://www.jackfan.top/categories/MySQL/"/>
           
         </display>
     </data>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.jackfan.top/"/>
-  <updated>2018-10-24T23:38:52.591Z</updated>
+  <updated>2018-10-25T00:10:58.154Z</updated>
   <id>http://www.jackfan.top/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>桥接模式</title>
+    <link href="http://www.jackfan.top/posts/43376/"/>
+    <id>http://www.jackfan.top/posts/43376/</id>
+    <published>2018-09-30T23:51:43.000Z</published>
+    <updated>2018-10-25T00:10:58.154Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;桥接模式定义&quot;&gt;&lt;a href=&quot;#桥接模式定义&quot; class=&quot;headerlink&quot; title=&quot;桥接模式定义&quot;&gt;&lt;/a&gt;桥接模式定义&lt;/h3&gt;&lt;p&gt;将抽象和实现放在两个不同的类层次中，使它们可以独立地变化。——《Head First
+        
+      
+    
+    </summary>
+    
+      <category term="设计模式" scheme="http://www.jackfan.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="http://www.jackfan.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MySQL索引类型</title>
     <link href="http://www.jackfan.top/posts/48951/"/>
     <id>http://www.jackfan.top/posts/48951/</id>
     <published>2018-09-30T16:16:28.000Z</published>
-    <updated>2018-10-24T23:38:52.591Z</updated>
+    <updated>2018-10-24T23:52:39.082Z</updated>
     
     <summary type="html">
     
@@ -35,10 +61,10 @@
     
     </summary>
     
-      <category term="索引" scheme="http://www.jackfan.top/categories/%E7%B4%A2%E5%BC%95/"/>
+      <category term="MySQL" scheme="http://www.jackfan.top/categories/MySQL/"/>
     
     
-      <category term="MySQL" scheme="http://www.jackfan.top/tags/MySQL/"/>
+      <category term="索引" scheme="http://www.jackfan.top/tags/%E7%B4%A2%E5%BC%95/"/>
     
   </entry>
   
@@ -523,32 +549,6 @@
     
     
       <category term="server" scheme="http://www.jackfan.top/tags/server/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Angular中请求Spring Boot接口缺少X-Application-Context报错</title>
-    <link href="http://www.jackfan.top/posts/23032/"/>
-    <id>http://www.jackfan.top/posts/23032/</id>
-    <published>2018-04-14T11:34:49.000Z</published>
-    <updated>2018-04-14T15:04:17.697Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Angular中请求Spring-Boot接口缺少X-Application-Context报错&quot;&gt;&lt;a href=&quot;#Angular中请求Spring-Boot接口缺少X-Application-Context报错&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Spring" scheme="http://www.jackfan.top/categories/Spring/"/>
-    
-    
-      <category term="Spring Boot" scheme="http://www.jackfan.top/tags/Spring-Boot/"/>
     
   </entry>
   
