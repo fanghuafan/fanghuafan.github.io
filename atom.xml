@@ -73,6 +73,37 @@
   </entry>
   
   <entry>
+    <title>Integer to Roman</title>
+    <link href="http://www.jackfan.top/posts/13635/"/>
+    <id>http://www.jackfan.top/posts/13635/</id>
+    <published>2018-10-10T14:39:43.000Z</published>
+    <updated>2018-10-26T14:52:25.251Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.&lt;/p&gt;
+&lt;p&gt;Symbol       Value&lt;br&gt;I             1&lt;br&gt;V    
+        
+      
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://www.jackfan.top/categories/Algorithm/"/>
+    
+      <category term="leetcode" scheme="http://www.jackfan.top/categories/Algorithm/leetcode/"/>
+    
+    
+      <category term="Algorithm" scheme="http://www.jackfan.top/tags/Algorithm/"/>
+    
+      <category term="leetcode" scheme="http://www.jackfan.top/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
     <title>桥接模式</title>
     <link href="http://www.jackfan.top/posts/43376/"/>
     <id>http://www.jackfan.top/posts/43376/</id>
@@ -521,34 +552,6 @@
     
     
       <category term="git" scheme="http://www.jackfan.top/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>KVM+SPICE安装配置文档</title>
-    <link href="http://www.jackfan.top/posts/43868/"/>
-    <id>http://www.jackfan.top/posts/43868/</id>
-    <published>2018-05-07T15:07:45.000Z</published>
-    <updated>2018-05-07T15:12:21.839Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;CentOS7-2部署KVM虚拟机&quot;&gt;&lt;a href=&quot;#CentOS7-2部署KVM虚拟机&quot; class=&quot;headerlink&quot; title=&quot;CentOS7.2部署KVM虚拟机&quot;&gt;&lt;/a&gt;CentOS7.2部署KVM虚拟机&lt;/h3&gt;&lt;h4
-        
-      
-    
-    </summary>
-    
-      <category term="server" scheme="http://www.jackfan.top/categories/server/"/>
-    
-      <category term="虚拟化" scheme="http://www.jackfan.top/categories/server/%E8%99%9A%E6%8B%9F%E5%8C%96/"/>
-    
-    
-      <category term="JKVM" scheme="http://www.jackfan.top/tags/JKVM/"/>
     
   </entry>
   

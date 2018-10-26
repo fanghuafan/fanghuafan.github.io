@@ -25,6 +25,19 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[Integer to Roman]]></title>
+    <url>%2Fposts%2F13635%2F</url>
+    <content type="text"><![CDATA[Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M. Symbol ValueI 1V 5X 10L 50C 100D 500M 1000For example, two is written as II in Roman numeral, just two one’s added together. Twelve is written as, XII, which is simply X + II. The number twenty seven is written as XXVII, which is XX + V + II. Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used: I can be placed before V (5) and X (10) to make 4 and 9.X can be placed before L (50) and C (100) to make 40 and 90.C can be placed before D (500) and M (1000) to make 400 and 900.Given an integer, convert it to a roman numeral. Input is guaranteed to be within the range from 1 to 3999. Example 1: Input: 3Output: “III”Example 2: Input: 4Output: “IV”Example 3: Input: 9Output: “IX”Example 4: Input: 58Output: “LVIII”Explanation: L = 50, V = 5, III = 3.Example 5: Input: 1994Output: “MCMXCIV”Explanation: M = 1000, CM = 900, XC = 90 and IV = 4. 12345678910111213141516171819char* intToRoman(int num) &#123; char* M[] = &#123;"", "M", "MM", "MMM"&#125;; char* C[] = &#123;"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"&#125;; char* X[] = &#123;"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"&#125;; char* I[] = &#123;"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"&#125;; char* m = M[num/1000]; char* c = C[(num%1000)/100]; char* x = X[(num%100)/10]; char* i = I[num%10]; char *result = (char *) malloc(strlen(m) + strlen(c) + strlen(x) + strlen(i)); strcat(result, m); strcat(result, c); strcat(result, x); strcat(result, i); return result;&#125;]]></content>
+      <categories>
+        <category>Algorithm</category>
+        <category>leetcode</category>
+      </categories>
+      <tags>
+        <tag>Algorithm</tag>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[桥接模式]]></title>
     <url>%2Fposts%2F43376%2F</url>
     <content type="text"><![CDATA[桥接模式定义将抽象和实现放在两个不同的类层次中，使它们可以独立地变化。——《Head First 设计模式》将类的功能层次结构和实现层次结构相分离，使二者能够独立地变化，并在两者之间搭建桥梁，实现桥接。—— 《图解设计模式》 类的功能层次结构：父类具有基本功能，在子类中增加新的功能；类的实现层次结构：父类通过声明抽象方法来定义接口，子类通过实现具体方法来实现接口； 桥接模式中有四个角色： 抽象化角色：使用实现者角色提供的接口来定义基本功能接口。 持有实现者角色，并在功能接口中委托给它，起到搭建桥梁的作用；注意，抽象化角色并不是指它就是一个抽象类，而是指抽象了实现。 改善后的抽象化角色：作为抽象化角色的子类，增加新的功能，也就是增加新的接口（方法）；与其构成类的功能层次结构； 实现者角色：提供了用于抽象化角色的接口；它是一个抽象类或者接口。 具体的实现者角色：作为实现者角色的子类，通过实现具体方法来实现接口；与其构成类的实现层次结构。如果抽象和实现两者做不到独立地变化，就不算桥接模式。 桥接模式和适配器模式的区别共同点：桥接和适配器都是让两个东西配合工作不同点：出发点不同。 适配器：改变已有的两个接口，让他们相容。 桥接模式：分离抽象化和实现，使两者的接口可以不同，目的是分离。 所以说，如果你拿到两个已有模块，想让他们同时工作，那么你使用的适配器。如果你还什么都没有，但是想分开实现，那么桥接是一个选择。 桥接是先有桥，才有两端的东西适配是先有两边的东西，才有适配器 设计模式实例具体实例 点击查看 参考文献：http://www.runoob.com/design-pattern/bridge-pattern.html （全文完）]]></content>
