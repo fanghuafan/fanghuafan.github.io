@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.jackfan.top/"/>
-  <updated>2018-10-25T00:10:58.154Z</updated>
+  <updated>2018-10-26T00:08:52.761Z</updated>
   <id>http://www.jackfan.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Spring MVC filter、interceptor、AOP区别</title>
+    <link href="http://www.jackfan.top/posts/57465/"/>
+    <id>http://www.jackfan.top/posts/57465/</id>
+    <published>2018-10-25T16:13:48.000Z</published>
+    <updated>2018-10-26T00:08:52.761Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Filter过滤器&quot;&gt;&lt;a href=&quot;#Filter过滤器&quot; class=&quot;headerlink&quot; title=&quot;Filter过滤器&quot;&gt;&lt;/a&gt;Filter过滤器&lt;/h3&gt;&lt;p&gt;过滤器拦截web访问url地址。
+        
+      
+    
+    </summary>
+    
+      <category term="Spring" scheme="http://www.jackfan.top/categories/Spring/"/>
+    
+    
+      <category term="Spring" scheme="http://www.jackfan.top/tags/Spring/"/>
+    
+  </entry>
   
   <entry>
     <title>桥接模式</title>
@@ -521,34 +547,6 @@
     
     
       <category term="JAVA" scheme="http://www.jackfan.top/tags/JAVA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>DELL R730xd服务器风扇问题解决</title>
-    <link href="http://www.jackfan.top/posts/53555/"/>
-    <id>http://www.jackfan.top/posts/53555/</id>
-    <published>2018-04-15T11:34:49.000Z</published>
-    <updated>2018-05-06T15:01:02.396Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;DELL R730xd 加装PCIE显卡风扇问题   &lt;/p&gt;
-&lt;p&gt;国外网站看到一个IMPI的解决方法，禁用对第三方PCI卡的风扇响应&lt;/p&gt;
-&lt;h4 id=&quot;1-Install-IPMI-tools&quot;&gt;&lt;a href=&quot;#1-Install-IPMI-tools&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="server" scheme="http://www.jackfan.top/categories/server/"/>
-    
-    
-      <category term="server" scheme="http://www.jackfan.top/tags/server/"/>
     
   </entry>
   
