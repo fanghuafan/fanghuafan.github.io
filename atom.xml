@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Karlの博客</title>
+  <title>南风の行者</title>
   
-  <subtitle>生于忧患，死于安乐&lt;br/&gt;逆水行舟，不进则退</subtitle>
+  <subtitle>人生是一场修行</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.jackfan.top/"/>
@@ -10,7 +10,7 @@
   <id>http://www.jackfan.top/</id>
   
   <author>
-    <name>Karl</name>
+    <name>南风</name>
     
   </author>
   
