@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="Karlの博客">
 <meta property="og:description" content="先来解决一个比较经典的问题，String为什么是final?final的出现就是为了为了不想改变，而不想改变的理由有两点：设计(安全)或者效率。 1、从设计安全上讲，1)、确保它们不会在子类中改变语义。String类是final类，这意味着不允许任何人定义String的子类。换言之，如果有一个String的引用，它引用的一定是一个String对象，而不可能是其他类的对象。2)、String 一旦被">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2018-03-27T23:17:05.137Z">
+<meta property="og:updated_time" content="2018-03-27T23:17:04.427Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="String源码研究">
 <meta name="twitter:description" content="先来解决一个比较经典的问题，String为什么是final?final的出现就是为了为了不想改变，而不想改变的理由有两点：设计(安全)或者效率。 1、从设计安全上讲，1)、确保它们不会在子类中改变语义。String类是final类，这意味着不允许任何人定义String的子类。换言之，如果有一个String的引用，它引用的一定是一个String对象，而不可能是其他类的对象。2)、String 一旦被">
@@ -113,7 +113,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -365,7 +365,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-28T07:17:05+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-28T07:17:04+08:00">
                 2018-03-28
               </time>
             
@@ -569,8 +569,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/48293/" rel="prev" title="Centos7查看版本号">
-                Centos7查看版本号 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/65163/" rel="prev" title="享元模式">
+                享元模式 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -624,6 +624,8 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
     
     <div class="sidebar-inner">
 
@@ -794,7 +796,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

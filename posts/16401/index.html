@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="Karlの博客">
 <meta property="og:description" content="为了在分布式系统快速定位问题及进行性能问题定位，我们需要知道引起性能问题的具体操作，然而在分布式系统中，一个请求往往会调用很多的服务（service），如何快速的定位，这个时候我们就需要分布式链路跟踪系统，如ZipKin，它会帮助我们快速定位问题根源。然而，本文不使用zipkin作为链路跟踪，通过自己实现，从Nginx—&amp;gt;Tomcat—-&amp;gt;Spring MVC Controller—&amp;">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2018-10-24T14:09:26.661Z">
+<meta property="og:updated_time" content="2018-10-24T14:09:26.398Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dubbo分布式调用链日志追踪">
 <meta name="twitter:description" content="为了在分布式系统快速定位问题及进行性能问题定位，我们需要知道引起性能问题的具体操作，然而在分布式系统中，一个请求往往会调用很多的服务（service），如何快速的定位，这个时候我们就需要分布式链路跟踪系统，如ZipKin，它会帮助我们快速定位问题根源。然而，本文不使用zipkin作为链路跟踪，通过自己实现，从Nginx—&amp;gt;Tomcat—-&amp;gt;Spring MVC Controller—&amp;">
@@ -113,7 +113,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -615,6 +615,8 @@
 
   <aside id="sidebar" class="sidebar">
     
+      <div id="sidebar-dimmer"></div>
+    
     <div class="sidebar-inner">
 
       
@@ -784,7 +786,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

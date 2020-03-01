@@ -102,7 +102,7 @@
 <meta property="og:locale" content="Chinese">
 <meta property="og:image" content="https://i.imgur.com/C5eRRmb.png">
 <meta property="og:image" content="https://i.imgur.com/HNl9rkN.png">
-<meta property="og:updated_time" content="2018-03-22T22:41:32.964Z">
+<meta property="og:updated_time" content="2018-03-22T22:41:32.528Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="虚拟机外部无法访问虚拟机内Linux系统IP的问题">
 <meta name="twitter:description" content="主要是因为主机IP和虚拟机IP不在同一网段的问题，我直接把vimnet8中的TCP/IPv4设置成自动获取IP地址即可ping通，如果要访问端口，可以在防火墙上打开特定端口或者直接关闭防火墙。操作如图：">
@@ -116,7 +116,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -625,6 +625,8 @@
 
   <aside id="sidebar" class="sidebar">
     
+      <div id="sidebar-dimmer"></div>
+    
     <div class="sidebar-inner">
 
       
@@ -794,7 +796,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

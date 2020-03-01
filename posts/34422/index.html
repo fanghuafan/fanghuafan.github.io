@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="Karlの博客">
 <meta property="og:description" content="JAVA中class.forName()和classLoader都可用来对类进行加载： class.forName()前者除了将类的.class文件加载到jvm中之外，还会对类进行解释，执行类中的static块。而classLoader只干一件事情，就是将.class文件加载到jvm中，不会执行static中的内容,只有在newInstance才会去执行static块。   Class.forNa">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2018-05-06T15:11:49.285Z">
+<meta property="og:updated_time" content="2018-05-06T15:11:48.633Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JAVA反射中，Class.forName和classloader的区别">
 <meta name="twitter:description" content="JAVA中class.forName()和classLoader都可用来对类进行加载： class.forName()前者除了将类的.class文件加载到jvm中之外，还会对类进行解释，执行类中的static块。而classLoader只干一件事情，就是将.class文件加载到jvm中，不会执行static中的内容,只有在newInstance才会去执行static块。   Class.forNa">
@@ -113,7 +113,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -365,7 +365,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-05-06T23:11:49+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-05-06T23:11:48+08:00">
                 2018-05-06
               </time>
             
@@ -622,6 +622,8 @@
 
   <aside id="sidebar" class="sidebar">
     
+      <div id="sidebar-dimmer"></div>
+    
     <div class="sidebar-inner">
 
       
@@ -791,7 +793,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

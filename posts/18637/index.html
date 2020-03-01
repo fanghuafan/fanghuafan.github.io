@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="Karlの博客">
 <meta property="og:description" content="一、问题切入前段时间，有人问我：“如何判断两个文件是否相同？”，顿时让我想到了之前在技术博客上看到的文章，大部分都是说使用散列MD5的方法去判断，后来有个大神跟我说，他的结论：“两个相同的文件散列值一定相同，但是不同的文件有可能散列值相同”，为什么呢？ 二、问题求解首先回顾一下密码学中的散列函数 1、什么是散列算法呢？散列算法可以把【任意尺寸】的数据（原始数据）转变为一个【固定尺寸】的“小”数据（">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2018-08-23T00:01:40.728Z">
+<meta property="og:updated_time" content="2018-08-23T00:01:40.281Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何正确的比较两个文件是否相同">
 <meta name="twitter:description" content="一、问题切入前段时间，有人问我：“如何判断两个文件是否相同？”，顿时让我想到了之前在技术博客上看到的文章，大部分都是说使用散列MD5的方法去判断，后来有个大神跟我说，他的结论：“两个相同的文件散列值一定相同，但是不同的文件有可能散列值相同”，为什么呢？ 二、问题求解首先回顾一下密码学中的散列函数 1、什么是散列算法呢？散列算法可以把【任意尺寸】的数据（原始数据）转变为一个【固定尺寸】的“小”数据（">
@@ -113,7 +113,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -626,6 +626,8 @@
 
   <aside id="sidebar" class="sidebar">
     
+      <div id="sidebar-dimmer"></div>
+    
     <div class="sidebar-inner">
 
       
@@ -795,7 +797,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

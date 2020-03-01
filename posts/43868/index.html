@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="Karlの博客">
 <meta property="og:description" content="CentOS7.2部署KVM虚拟机一、安装KVM#####1. 验证CPU是否支持KVM；如果结果中有vmx（Intel）或svm(AMD)字样，就说明CPU的支持的1egrep &amp;apos;(vmx|svm)&amp;apos; /proc/cpuinfo #####2. 关闭SELinux，将 /etc/sysconfig/selinux 中的 SELinux=enforcing 修改为 SELinu">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2018-05-07T15:12:21.839Z">
+<meta property="og:updated_time" content="2018-05-07T15:12:20.326Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="KVM+SPICE安装配置文档">
 <meta name="twitter:description" content="CentOS7.2部署KVM虚拟机一、安装KVM#####1. 验证CPU是否支持KVM；如果结果中有vmx（Intel）或svm(AMD)字样，就说明CPU的支持的1egrep &amp;apos;(vmx|svm)&amp;apos; /proc/cpuinfo #####2. 关闭SELinux，将 /etc/sysconfig/selinux 中的 SELinux=enforcing 修改为 SELinu">
@@ -113,7 +113,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -365,7 +365,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-05-07T23:12:21+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-05-07T23:12:20+08:00">
                 2018-05-07
               </time>
             
@@ -711,6 +711,8 @@ virsh edit win7-0[这个命令比较坑爹，用上面命令替代]
 
   <aside id="sidebar" class="sidebar">
     
+      <div id="sidebar-dimmer"></div>
+    
     <div class="sidebar-inner">
 
       
@@ -880,7 +882,7 @@ virsh edit win7-0[这个命令比较坑爹，用上面命令替代]
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="Karlの博客">
 <meta property="og:description" content="今天突然发现请求微信小程序获取OpenID的接口报错，看了一下日志，找了好久发现是SSl版本的原因，之前没有问题，今天重启了一次就出现这个问题。 javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake     at sun.security.ssl.SSLSocketImpl.readR">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2018-04-13T15:33:49.705Z">
+<meta property="og:updated_time" content="2018-04-13T15:33:49.524Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="httpclient SSL请求异常处理">
 <meta name="twitter:description" content="今天突然发现请求微信小程序获取OpenID的接口报错，看了一下日志，找了好久发现是SSl版本的原因，之前没有问题，今天重启了一次就出现这个问题。 javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake     at sun.security.ssl.SSLSocketImpl.readR">
@@ -113,7 +113,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -694,6 +694,8 @@ sslsf = <span class="keyword">new</span> SSLConnectionSocketFactory(builder.buil
 
   <aside id="sidebar" class="sidebar">
     
+      <div id="sidebar-dimmer"></div>
+    
     <div class="sidebar-inner">
 
       
@@ -838,7 +840,7 @@ sslsf = <span class="keyword">new</span> SSLConnectionSocketFactory(builder.buil
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
